@@ -1,5 +1,6 @@
 # Alaa Salah — Portfolio Website
-![profile](https://github.com/missalaasalah/missalaasalah.github.io/blob/main/1768499287372.jpg?raw=true)
+<img src="https://github.com/missalaasalah/missalaasalah.github.io/raw/main/1768499287372.jpg" width="150" style="border-radius:50%">
+
 **Junior Data Analyst · Cairo, Egypt**
 
 > "Data is more than just numbers — it's a lens to understand the world, predict future trends, and make informed decisions."
