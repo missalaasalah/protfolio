@@ -1,4 +1,9 @@
 # Alaa Salah — Portfolio Website
+<h1>Hi, I'm Missala 👋</h1>
+
+<img src="https://your-image-link" width="150" style="border-radius:50%">
+
+<p>Front-End Developer</p>
 
 **Junior Data Analyst · Cairo, Egypt**
 
