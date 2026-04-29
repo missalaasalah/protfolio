@@ -1,7 +1,7 @@
 # Alaa Salah — Portfolio Website
 <div align="center">
 
-  <img src="./1768499287372.jpg" width="150" style="border-radius:50%">
+  <img src="1768499287372.jpg" width="150" style="border-radius:50%">
 
   <h1>Hi, I'm Alaa Salah 👋</h1>
 
