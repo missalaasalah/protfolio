@@ -1,13 +1,4 @@
 # Alaa Salah — Portfolio Website
-<div align="center">
-
-  <img src="./1768499287372.jpg" width="150" alt="profile">
-
-  <h1>Hi, I'm Alaa Salah 👋</h1>
-
-  <p>Front-End Developer</p>
-
-</div>
 Junior Data Analyst · Cairo, Egypt
 </p>
 
