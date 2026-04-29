@@ -1,13 +1,21 @@
 # Alaa Salah — Portfolio Website
 <div align="center">
 
-  <img src="1768499287372.jpg" width="150" style="border-radius:50%">
+  <img src="./1768499287372.jpg" width="150" style="border-radius:50%" alt="profile">
 
   <h1>Hi, I'm Alaa Salah 👋</h1>
 
   <p>Front-End Developer</p>
 
 </div>
+
+<p align="center">
+Junior Data Analyst · Cairo, Egypt
+</p>
+
+<p align="center">
+Data is more than just numbers — it's a lens to understand the world, predict future trends, and make informed decisions.
+</p>
 **Junior Data Analyst · Cairo, Egypt**
 
 > "Data is more than just numbers — it's a lens to understand the world, predict future trends, and make informed decisions."
