@@ -1,5 +1,5 @@
 # Alaa Salah — Portfolio Website
-<h1>Hi, I'm Missala 👋</h1>
+<h1>Hi, I'm Alaa salah 👋</h1>
 
 <img src="https://your-image-link" width="150" style="border-radius:50%">
 
