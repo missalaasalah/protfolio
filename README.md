@@ -1,9 +1,13 @@
 # Alaa Salah — Portfolio Website
-<h1>Hi, I'm Alaa Salah 👋</h1>
+<div align="center">
 
-<img src=https://github.com/missalaasalah/protfolio/blob/main/1768499287372.jpg?raw=true
+  <img src="./1768499287372.jpg" width="150" style="border-radius:50%">
 
-<p>Front-End Developer</p>
+  <h1>Hi, I'm Alaa Salah 👋</h1>
+
+  <p>Front-End Developer</p>
+
+</div>
 **Junior Data Analyst · Cairo, Egypt**
 
 > "Data is more than just numbers — it's a lens to understand the world, predict future trends, and make informed decisions."
