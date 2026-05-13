@@ -736,45 +736,32 @@
     font-family: var(--mono);
   }
 
- #certifications {
-  padding: 60px 40px;
-  background: #111318;
+ .certs-grid{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:35px;
 }
 
-#certifications h2 {
-  text-align: center;
-  font-size: 32px;
-  margin-bottom: 30px;
-  color: #fff;
+.cert-card{
+  width:90%;
+  max-width:900px;
+  border-radius:16px;
+  overflow:hidden;
+  background:#1e2230;
+  border:1px solid rgba(255,255,255,0.08);
+  transition:0.3s;
+  text-decoration:none;
 }
 
-.certs-grid {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  align-items: center;
+.cert-card img{
+  width:100%;
+  display:block;
 }
 
-.cert-card {
-  width: 90%;
-  max-width: 900px;
-  background: #1e2230;
-  padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-  border: 1px solid rgba(255,255,255,0.08);
-}
-
-.cert-title {
-  font-size: 18px;
-  font-weight: bold;
-  color: #fff;
-}
-
-.cert-org {
-  font-size: 13px;
-  color: #9ba3b8;
-  margin-top: 5px;
+.cert-card:hover{
+  transform:translateY(-5px);
+  box-shadow:0 10px 25px rgba(0,0,0,0.35);
 }
   
   /* ─── VOLUNTEERING ─── */
@@ -1311,7 +1298,6 @@
         </div>
       </div>
 
-<!-- CERTIFICATIONS -->
 <section id="certifications">
 
   <div class="section-inner">
@@ -1322,42 +1308,31 @@
 
     <h2 class="section-title">Certifications</h2>
 
-    <div class="projects-grid fade-up">
+    <div class="certs-grid">
 
-      <div class="project-card">
-        <div class="project-title">IBM AI Engineering — Professional Certificate</div>
-        <div class="timeline-org">IBM</div>
-      </div>
+      <a href="images/Screenshot 2026-05-13 103738.png" target="_blank" class="cert-card">
+        <img src="images/Screenshot 2026-05-13 103738.png" alt="">
+      </a>
 
-      <div class="project-card">
-        <div class="project-title">Machine Learning with Python</div>
-        <div class="timeline-org">IBM</div>
-      </div>
+      <a href="images/Screenshot 2026-05-13 103731.png" target="_blank" class="cert-card">
+        <img src="images/Screenshot 2026-05-13 103731.png" alt="">
+      </a>
 
-      <div class="project-card">
-        <div class="project-title">Deep Learning with Keras & TensorFlow</div>
-        <div class="timeline-org">IBM</div>
-      </div>
+      <a href="images/Screenshot 2026-05-13 103724.png" target="_blank" class="cert-card">
+        <img src="images/Screenshot 2026-05-13 103724.png" alt="">
+      </a>
 
-      <div class="project-card">
-        <div class="project-title">Deep Learning with PyTorch</div>
-        <div class="timeline-org">IBM</div>
-      </div>
+      <a href="images/Screenshot 2026-05-13 103716.png" target="_blank" class="cert-card">
+        <img src="images/Screenshot 2026-05-13 103716.png" alt="">
+      </a>
 
-      <div class="project-card">
-        <div class="project-title">Google Data Analytics Professional Certificate</div>
-        <div class="timeline-org">Google</div>
-      </div>
+      <a href="images/Screenshot 2026-05-13 103709.png" target="_blank" class="cert-card">
+        <img src="images/Screenshot 2026-05-13 103709.png" alt="">
+      </a>
 
-      <div class="project-card">
-        <div class="project-title">Google Data Analytics Capstone</div>
-        <div class="timeline-org">Google</div>
-      </div>
-
-      <div class="project-card">
-        <div class="project-title">ICDL — International Computer Driving Licence</div>
-        <div class="timeline-org">ICDL</div>
-      </div>
+      <a href="images/Screenshot 2026-05-13 103702.png" target="_blank" class="cert-card">
+        <img src="images/Screenshot 2026-05-13 103702.png" alt="">
+      </a>
 
     </div>
 
