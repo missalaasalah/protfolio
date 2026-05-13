@@ -1274,44 +1274,73 @@
         </div>
       </div>
 
-    </div>
-  </div>
-</section>
-
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-  <title>Portfolio</title>
+  <meta charset="UTF-8">
+  <title>My Portfolio</title>
 
   <style>
     body {
-      font-family: Arial;
+      font-family: Arial, sans-serif;
       margin: 0;
-    }
-
-    #certifications {
-      padding: 50px;
       background: #f5f7fb;
-      text-align: center;
+      padding: 40px;
     }
 
-    #certifications h2 {
-      font-size: 34px;
+    h2 {
+      text-align: center;
+      font-size: 32px;
+      margin-bottom: 10px;
+      color: #222;
+    }
+
+    p {
+      text-align: center;
+      color: #777;
+      font-size: 14px;
       margin-bottom: 30px;
     }
 
-    .cert-gallery {
+    .certs-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-      gap: 15px;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 20px;
     }
 
-    .cert-gallery img {
-      width: 100%;
-      height: 140px;
-      object-fit: cover;
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    .cert-card {
+      background: white;
+      border-radius: 12px;
+      padding: 16px;
+      text-decoration: none;
+      display: block;
+      transition: 0.3s;
+      color: black;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    .cert-card:hover {
+      transform: translateY(-8px);
+    }
+
+    .cert-name {
+      font-weight: bold;
+      margin-bottom: 5px;
+      font-size: 15px;
+    }
+
+    .cert-issuer {
+      font-size: 12px;
+      color: gray;
+    }
+
+    .cert-link {
+      font-size: 12px;
+      color: #2563eb;
+      margin-top: 10px;
+      display: inline-block;
+      font-weight: bold;
     }
   </style>
 
@@ -1319,44 +1348,47 @@
 
 <body>
 
-<section id="certifications">
   <h2>My Certifications</h2>
+  <p>Click on any certificate to view the PDF</p>
 
-  <div class="cert-gallery">
+  <div class="certs-grid">
 
-    <img src="Screenshot 2026-05-13 103346.png">
-    <img src="Screenshot 2026-05-13 103413.png">
-    <img src="Screenshot 2026-05-13 103424.png">
-    <img src="Screenshot 2026-05-13 103434.png">
-    <img src="Screenshot 2026-05-13 103448.png">
-    <img src="Screenshot 2026-05-13 103457.png">
-    <img src="Screenshot 2026-05-13 103506.png">
-    <img src="Screenshot 2026-05-13 103515.png">
-    <img src="Screenshot 2026-05-13 103525.png">
-    <img src="Screenshot 2026-05-13 103533.png">
-    <img src="Screenshot 2026-05-13 103540.png">
-    <img src="Screenshot 2026-05-13 103549.png">
-    <img src="Screenshot 2026-05-13 103557.png">
-    <img src="Screenshot 2026-05-13 103604.png">
-    <img src="Screenshot 2026-05-13 103611.png">
-    <img src="Screenshot 2026-05-13 103618.png">
-    <img src="Screenshot 2026-05-13 103626.png">
-    <img src="Screenshot 2026-05-13 103633.png">
-    <img src="Screenshot 2026-05-13 103645.png">
-    <img src="Screenshot 2026-05-13 103655.png">
-    <img src="Screenshot 2026-05-13 103702.png">
-    <img src="Screenshot 2026-05-13 103709.png">
-    <img src="Screenshot 2026-05-13 103716.png">
-    <img src="Screenshot 2026-05-13 103724.png">
-    <img src="Screenshot 2026-05-13 103731.png">
-    <img src="Screenshot 2026-05-13 103738.png">
+    <a class="cert-card" href="certificates/ml-python.pdf" target="_blank">
+      <div class="cert-name">Machine Learning with Python</div>
+      <div class="cert-issuer">IBM</div>
+      <div class="cert-link">📄 View Certificate</div>
+    </a>
+
+    <a class="cert-card" href="certificates/google-data.pdf" target="_blank">
+      <div class="cert-name">Google Data Analytics</div>
+      <div class="cert-issuer">Google</div>
+      <div class="cert-link">📄 View Certificate</div>
+    </a>
+
+    <a class="cert-card" href="certificates/ai-agents.pdf" target="_blank">
+      <div class="cert-name">AI Agents Using RAG & LangChain</div>
+      <div class="cert-issuer">IBM</div>
+      <div class="cert-link">📄 View Certificate</div>
+    </a>
+
+    <a class="cert-card" href="certificates/deep-learning.pdf" target="_blank">
+      <div class="cert-name">Deep Learning with TensorFlow</div>
+      <div class="cert-issuer">IBM</div>
+      <div class="cert-link">📄 View Certificate</div>
+    </a>
+
+    <a class="cert-card" href="certificates/capstone.pdf" target="_blank">
+      <div class="cert-name">Google Capstone Project</div>
+      <div class="cert-issuer">Google</div>
+      <div class="cert-link">📄 View Certificate</div>
+    </a>
 
   </div>
-</section>
 
 </body>
+
 </html>
-  
+      
 <!-- VOLUNTEERING -->
 <section id="volunteering" class="vol-section">
   <div class="section-inner">
