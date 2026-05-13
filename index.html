@@ -5,10 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Alaa Salah Portfolio</title>
 
-<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@300;400;500&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
 
 <style>
-/* ===== BASE ===== */
 body{
   margin:0;
   font-family:Outfit, Arial;
@@ -20,12 +19,12 @@ body{
 nav{
   position:fixed;
   top:0;
+  left:0;
   width:100%;
-  padding:15px 20px;
+  background:rgba(0,0,0,0.8);
+  padding:12px 20px;
   display:flex;
   justify-content:space-between;
-  background:rgba(0,0,0,0.7);
-  backdrop-filter:blur(10px);
   z-index:1000;
 }
 
@@ -37,7 +36,7 @@ nav a{
 
 /* SECTIONS */
 section{
-  padding:90px 20px;
+  padding:100px 20px;
   max-width:1100px;
   margin:auto;
 }
@@ -49,15 +48,16 @@ section{
 }
 
 .hero h1{
-  font-size:50px;
+  font-size:48px;
+  margin:0;
 }
 
-.hero em{
+.hero span{
   color:#00d4a1;
 }
 
-/* PROJECT */
-.project-card{
+/* CARDS */
+.card{
   background:#1e2230;
   padding:20px;
   border-radius:12px;
@@ -78,7 +78,7 @@ section{
   border-radius:12px;
 }
 
-/* CONTACT */
+/* FORM */
 input,textarea{
   width:100%;
   padding:10px;
@@ -93,6 +93,7 @@ button{
   background:#00d4a1;
   border:none;
   cursor:pointer;
+  border-radius:8px;
 }
 </style>
 </head>
@@ -112,15 +113,16 @@ button{
 
 <!-- HERO -->
 <section class="hero">
-  <h1>Hello 👋 I'm <em>Alaa Salah</em></h1>
+  <h1>Hello 👋 I'm <span>Alaa Salah</span></h1>
   <p>Junior Data Analyst</p>
 </section>
 
 <!-- ABOUT -->
 <section id="about">
-  <h2>About</h2>
+  <h2>About Me</h2>
   <p>
-    I turn data into insights using Python, SQL and Power BI.
+    I am a Junior Data Analyst skilled in Python, SQL, Power BI and Machine Learning.
+    I transform raw data into meaningful insights.
   </p>
 </section>
 
@@ -128,41 +130,33 @@ button{
 <section id="projects">
   <h2>Projects</h2>
 
-  <div class="project-card">
-    TechUni Intelligence Hub
-  </div>
+  <div class="card">TechUni Intelligence Hub (SQL + Power BI + Python)</div>
+  <div class="card">Sales Dashboard (Power BI)</div>
+  <div class="card">ML Body Performance Model</div>
 
-  <div class="project-card">
-    Sales Dashboard (Power BI)
-  </div>
-
-  <div class="project-card">
-    Machine Learning Project
-  </div>
 </section>
 
 <!-- CERTIFICATIONS -->
 <section id="certs">
-  <h2>My Certifications</h2>
+  <h2>Certifications</h2>
 
   <div class="cert-gallery">
-    <img src="images/Screenshot 2026-05-13 103738.png">
-    <img src="images/Screenshot 2026-05-13 103731.png">
-    <img src="images/Screenshot 2026-05-13 103724.png">
-    <img src="images/Screenshot 2026-05-13 103716.png">
+    <img src="images/cert1.png" alt="cert">
+    <img src="images/cert2.png" alt="cert">
+    <img src="images/cert3.png" alt="cert">
   </div>
 </section>
 
 <!-- CONTACT -->
 <section id="contact">
-  <h2>Contact</h2>
+  <h2>Contact Me</h2>
 
-  <input placeholder="Name">
+  <input placeholder="Your Name">
   <input placeholder="Email">
   <textarea placeholder="Message"></textarea>
 
-  <button onclick="alert('Message sent!')">
-    Send
+  <button onclick="alert('Message sent successfully!')">
+    Send Message
   </button>
 </section>
 
