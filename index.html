@@ -740,19 +740,50 @@
 
   <div class="section-inner">
 
-    <div class="section-label">
-      <span class="num">05 —</span> Credentials
-    </div>
-
     <h2 class="section-title">My Certifications</h2>
 
     <p style="color: var(--text3); font-size: 14px;">
-      I have completed multiple certifications in AI, Machine Learning, and Data Analysis from IBM and Google.
+      Click on any certificate to view the PDF.
     </p>
+
+    <div class="certs-grid">
+
+      <a class="cert-card" href="certificates/rag-langchain.pdf" target="_blank">
+        <div class="cert-name">Fundamentals of AI Agents Using RAG & LangChain</div>
+        <div class="cert-issuer">IBM</div>
+        <div class="cert-link">📄 View Certificate</div>
+      </a>
+
+      <a class="cert-card" href="certificates/ml-python.pdf" target="_blank">
+        <div class="cert-name">Machine Learning with Python</div>
+        <div class="cert-issuer">IBM</div>
+        <div class="cert-link">📄 View Certificate</div>
+      </a>
+
+      <a class="cert-card" href="certificates/keras-tensorflow.pdf" target="_blank">
+        <div class="cert-name">Deep Learning with Keras & TensorFlow</div>
+        <div class="cert-issuer">IBM</div>
+        <div class="cert-link">📄 View Certificate</div>
+      </a>
+
+      <a class="cert-card" href="certificates/google-data-analytics.pdf" target="_blank">
+        <div class="cert-name">Google Data Analytics Professional Certificate</div>
+        <div class="cert-issuer">Google</div>
+        <div class="cert-link">📄 View Certificate</div>
+      </a>
+
+      <a class="cert-card" href="certificates/google-capstone.pdf" target="_blank">
+        <div class="cert-name">Google Capstone Project</div>
+        <div class="cert-issuer">Google</div>
+        <div class="cert-link">📄 View Certificate</div>
+      </a>
+
+    </div>
 
   </div>
 
 </section>
+
   .certs-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -761,11 +792,13 @@
 }
 
 .cert-card {
-  background: var(--surface, #111);
-  border: 1px solid #333;
+  background: var(--surface);
+  border: 1px solid var(--border);
   border-radius: 12px;
   padding: 16px;
+  text-decoration: none;
   transition: 0.3s;
+  display: block;
 }
 
 .cert-card:hover {
@@ -776,20 +809,25 @@
 .cert-name {
   font-size: 14px;
   font-weight: 500;
-  color: white;
+  color: var(--text);
   margin-bottom: 6px;
 }
 
 .cert-issuer {
   font-size: 12px;
-  color: gray;
+  color: var(--text3);
 }
 
-.cert-image {
-  width: 100%;
-  border-radius: 10px;
-  margin-bottom: 10px;
-  display: block;
+.cert-link {
+  font-size: 12px;
+  color: var(--accent);
+  margin-top: 8px;
+  opacity: 0;
+  transition: 0.2s;
+}
+
+.cert-card:hover .cert-link {
+  opacity: 1;
 }
   /* ─── VOLUNTEERING ─── */
   .vol-section { background: var(--bg2); }
