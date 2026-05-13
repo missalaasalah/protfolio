@@ -5,63 +5,53 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Alaa Salah Portfolio</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
-
 <style>
 body{
   margin:0;
-  font-family:Outfit, Arial;
-  background:#0b0c0f;
-  color:#e8eaf0;
+  font-family: Arial, sans-serif;
+  background:#f5f7fb;
+  color:#222;
 }
 
 /* NAV */
 nav{
   position:fixed;
   top:0;
-  left:0;
   width:100%;
-  background:rgba(0,0,0,0.8);
-  padding:12px 20px;
+  background:#111;
+  color:#fff;
   display:flex;
   justify-content:space-between;
+  padding:15px 30px;
   z-index:1000;
 }
-
 nav a{
-  color:#aaa;
+  color:#fff;
+  margin-left:15px;
   text-decoration:none;
-  margin:0 10px;
-}
-
-/* SECTIONS */
-section{
-  padding:100px 20px;
-  max-width:1100px;
-  margin:auto;
 }
 
 /* HERO */
 .hero{
   text-align:center;
-  padding-top:140px;
+  padding:120px 20px 60px;
 }
-
+.hero img{
+  width:180px;
+  height:180px;
+  border-radius:50%;
+  object-fit:cover;
+  border:4px solid #ddd;
+}
 .hero h1{
-  font-size:48px;
-  margin:0;
+  margin-top:20px;
 }
 
-.hero span{
-  color:#00d4a1;
-}
-
-/* CARDS */
-.card{
-  background:#1e2230;
-  padding:20px;
-  border-radius:12px;
-  margin:10px 0;
+/* SECTIONS */
+section{
+  padding:60px 20px;
+  max-width:1000px;
+  margin:auto;
 }
 
 /* CERTS */
@@ -71,38 +61,40 @@ section{
   gap:20px;
   align-items:center;
 }
-
 .cert-gallery img{
   width:90%;
   max-width:800px;
-  border-radius:12px;
+  border-radius:10px;
+  box-shadow:0 5px 15px rgba(0,0,0,0.2);
 }
 
-/* FORM */
+/* CONTACT */
+form{
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+}
 input,textarea{
-  width:100%;
   padding:10px;
-  margin:8px 0;
-  border-radius:8px;
-  border:none;
+  border:1px solid #ccc;
+  border-radius:6px;
 }
 
 button{
-  width:100%;
   padding:12px;
-  background:#00d4a1;
+  background:#111;
+  color:#fff;
   border:none;
   cursor:pointer;
-  border-radius:8px;
+  border-radius:6px;
 }
 </style>
 </head>
 
 <body>
 
-<!-- NAV -->
 <nav>
-  <div>alaa.salah()</div>
+  <div>Alaa Salah</div>
   <div>
     <a href="#about">About</a>
     <a href="#projects">Projects</a>
@@ -112,53 +104,68 @@ button{
 </nav>
 
 <!-- HERO -->
-<section class="hero">
-  <h1>Hello 👋 I'm <span>Alaa Salah</span></h1>
+<div class="hero">
+  <img src="profile.jpg" alt="profile">
+  <h1>Hello 👋 I'm Alaa Salah</h1>
   <p>Junior Data Analyst</p>
-</section>
+</div>
 
 <!-- ABOUT -->
 <section id="about">
-  <h2>About Me</h2>
-  <p>
-    I am a Junior Data Analyst skilled in Python, SQL, Power BI and Machine Learning.
-    I transform raw data into meaningful insights.
-  </p>
+  <h2>About</h2>
+  <p>I turn data into insights and decisions.</p>
 </section>
 
 <!-- PROJECTS -->
 <section id="projects">
   <h2>Projects</h2>
-
-  <div class="card">TechUni Intelligence Hub (SQL + Power BI + Python)</div>
-  <div class="card">Sales Dashboard (Power BI)</div>
-  <div class="card">ML Body Performance Model</div>
-
+  <p>Here you can add your projects.</p>
 </section>
 
 <!-- CERTIFICATIONS -->
 <section id="certs">
-  <h2>Certifications</h2>
-
+  <h2>My Certifications</h2>
   <div class="cert-gallery">
-    <img src="images/cert1.png" alt="cert">
-    <img src="images/cert2.png" alt="cert">
-    <img src="images/cert3.png" alt="cert">
+    <img src="images/1.png">
+    <img src="images/2.png">
+    <img src="images/3.png">
   </div>
 </section>
 
 <!-- CONTACT -->
 <section id="contact">
-  <h2>Contact Me</h2>
+  <h2>Contact</h2>
 
-  <input placeholder="Your Name">
-  <input placeholder="Email">
-  <textarea placeholder="Message"></textarea>
-
-  <button onclick="alert('Message sent successfully!')">
-    Send Message
-  </button>
+  <form onsubmit="sendMessage(event)">
+    <input id="name" placeholder="Name">
+    <input id="email" placeholder="Email">
+    <textarea id="message" placeholder="Message"></textarea>
+    <button type="submit">Send</button>
+  </form>
 </section>
+
+<script>
+function sendMessage(e){
+  e.preventDefault();
+
+  const name = document.getElementById("name").value;
+  const email = document.getElementById("email").value;
+  const message = document.getElementById("message").value;
+
+  if(!name || !email || !message){
+    alert("Please fill all fields");
+    return;
+  }
+
+  const mailtoLink =
+    `mailto:miss.alaa.salah@gmail.com?subject=Portfolio&body=
+Name: ${name}
+Email: ${email}
+Message: ${message}`;
+
+  window.location.href = mailtoLink;
+}
+</script>
 
 </body>
 </html>
