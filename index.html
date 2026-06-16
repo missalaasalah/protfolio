@@ -105,7 +105,281 @@
   .edu-meta { display: flex; gap: 1.5rem; font-size: 13px; color: var(--text3); font-family: var(--mono); }
   .edu-desc { font-size: 14px; color: var(--text2); line-height: 1.7; margin-top: 1rem; padding-top: 1rem; border-top: 1px solid var(--border); }
 
-  <style>
+  /* CERTIFICATIONS */
+  .certs-section { background: var(--bg); }
+  .certs-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(480px, 1fr));
+    gap: 1.5rem;
+  }
+  .cert-img-wrap {
+    border-radius: var(--radius);
+    overflow: hidden;
+    border: 1px solid var(--border);
+    background: var(--surface);
+    transition: all 0.3s;
+    cursor: pointer;
+    position: relative;
+  }
+  .cert-img-wrap::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, var(--accent), transparent);
+    opacity: 0;
+    transition: opacity 0.3s;
+    z-index: 1;
+  }
+  .cert-img-wrap:hover { border-color: var(--accent); transform: translateY(-3px); box-shadow: 0 12px 40px rgba(0,212,161,0.15); }
+  .cert-img-wrap:hover::before { opacity: 1; }
+  .cert-img-wrap img { width: 100%; height: auto; display: block; transition: transform 0.4s ease; }
+  .cert-img-wrap:hover img { transform: scale(1.02); }
+  .cert-label { padding: 0.75rem 1rem; background: var(--surface2); border-top: 1px solid var(--border); font-size: 13px; font-weight: 500; color: var(--text); }
+  .cert-label span { display: block; font-size: 11px; color: var(--accent); font-family: var(--mono); margin-top: 0.15rem; }
+
+  /* LIGHTBOX */
+  .lightbox { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.93); z-index: 1000; align-items: center; justify-content: center; backdrop-filter: blur(8px); }
+  .lightbox.active { display: flex; }
+  .lightbox img { max-width: 90vw; max-height: 90vh; border-radius: var(--radius); box-shadow: 0 24px 80px rgba(0,0,0,0.8); border: 1px solid var(--border2); }
+  .lightbox-close { position: absolute; top: 1.5rem; right: 1.5rem; width: 44px; height: 44px; border-radius: 50%; background: var(--surface); border: 1px solid var(--border2); color: var(--text); font-size: 20px; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: all 0.2s; }
+  .lightbox-close:hover { border-color: var(--accent); color: var(--accent); }
+
+  /* VOLUNTEERING */
+  .vol-section { background: var(--bg2); }
+  .vol-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 2rem 2.5rem; display: flex; gap: 2rem; align-items: flex-start; transition: border-color 0.2s; }
+  .vol-card:hover { border-color: var(--accent); }
+  .vol-icon { width: 48px; height: 48px; border-radius: var(--radius-sm); background: var(--accent-dim); border: 1px solid var(--accent-glow); display: flex; align-items: center; justify-content: center; font-size: 1.4rem; flex-shrink: 0; }
+  .vol-info { flex: 1; }
+  .vol-role { font-size: 1.05rem; font-weight: 600; color: var(--text); margin-bottom: 0.25rem; }
+  .vol-org { font-size: 14px; color: var(--accent); font-family: var(--mono); margin-bottom: 0.5rem; }
+  .vol-period { font-size: 13px; color: var(--text3); font-family: var(--mono); margin-bottom: 1rem; }
+  .vol-desc { font-size: 14px; color: var(--text2); line-height: 1.7; }
+
+  /* LANGUAGES */
+  .langs-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 1rem; }
+  .lang-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.5rem; transition: border-color 0.2s; }
+  .lang-card:hover { border-color: var(--accent); }
+  .lang-flag { font-size: 2rem; margin-bottom: 0.75rem; }
+  .lang-name { font-size: 1.1rem; font-weight: 600; color: var(--text); margin-bottom: 0.25rem; }
+  .lang-level { font-size: 13px; color: var(--accent); font-family: var(--mono); }
+  .lang-desc { font-size: 13px; color: var(--text3); margin-top: 0.5rem; }
+
+  /* CONTACT */
+  .contact-section { background: var(--bg2); border-top: 1px solid var(--border); }
+  .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start; }
+  .contact-info { display: flex; flex-direction: column; gap: 1.5rem; }
+  .contact-heading { font-family: var(--serif); font-size: 2.5rem; color: var(--text); line-height: 1.15; margin-bottom: 0.5rem; }
+  .contact-sub { font-size: 15px; color: var(--text2); line-height: 1.7; }
+  .contact-links { display: flex; flex-direction: column; gap: 1rem; margin-top: 1rem; }
+  .contact-link { display: flex; align-items: center; gap: 1rem; text-decoration: none; padding: 1rem 1.25rem; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-sm); transition: all 0.2s; }
+  .contact-link:hover { border-color: var(--accent); background: var(--accent-dim); }
+  .contact-link-icon { width: 36px; height: 36px; border-radius: 8px; background: var(--bg); display: flex; align-items: center; justify-content: center; font-size: 1rem; flex-shrink: 0; color: var(--accent); }
+  .contact-link-info { flex: 1; }
+  .contact-link-label { font-size: 12px; color: var(--text3); font-family: var(--mono); margin-bottom: 0.1rem; }
+  .contact-link-value { font-size: 14px; color: var(--text); font-weight: 500; }
+  .contact-link:hover .contact-link-value { color: var(--accent); }
+  .contact-form { display: flex; flex-direction: column; gap: 1rem; }
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+  .form-group { display: flex; flex-direction: column; gap: 0.4rem; }
+  label { font-size: 12px; color: var(--text3); font-family: var(--mono); letter-spacing: 0.05em; }
+  input, textarea { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 0.75rem 1rem; font-size: 14px; color: var(--text); font-family: var(--sans); outline: none; transition: border-color 0.2s; resize: vertical; }
+  input:focus, textarea:focus { border-color: var(--accent); }
+  input::placeholder, textarea::placeholder { color: var(--text3); }
+  textarea { min-height: 140px; }
+
+  /* FOOTER */
+  footer { padding: 2rem; text-align: center; border-top: 1px solid var(--border); font-size: 13px; color: var(--text3); font-family: var(--mono); }
+  footer span { color: var(--accent); }
+
+  /* ANIMATIONS */
+  .fade-up { opacity: 0; transform: translateY(30px); transition: opacity 0.6s ease, transform 0.6s ease; }
+  .fade-up.visible { opacity: 1; transform: translateY(0); }
+
+  /* RESPONSIVE */
+  @media (max-width: 768px) {
+    nav { padding: 1rem; }
+    .nav-links { gap: 1rem; }
+    .nav-links a { font-size: 12px; }
+    .hero { padding: 5rem 1.25rem 3rem; }
+    .hero-layout { grid-template-columns: 1fr; gap: 2rem; }
+    .hero-photo-wrap { width: 170px; margin: 0 auto; order: -1; }
+    .hero-photo { width: 170px; height: 170px; }
+    .about-grid { grid-template-columns: 1fr; gap: 2rem; }
+    .projects-grid { grid-template-columns: 1fr; }
+    .project-card.featured { grid-column: span 1; }
+    .contact-grid { grid-template-columns: 1fr; gap: 2rem; }
+    .form-row { grid-template-columns: 1fr; }
+    .timeline::before { left: 0; }
+    .timeline-item { grid-template-columns: 1fr; gap: 0.5rem; padding-left: 1.5rem; }
+    .timeline-item::before { left: -4px; }
+    .timeline-date { text-align: left; padding-right: 0; }
+    section { padding: 3.5rem 1.25rem; }
+    .edu-card { flex-direction: column; gap: 1rem; }
+    .vol-card { flex-direction: column; gap: 1rem; }
+    .certs-gallery { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">alaa.salah()</div>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#certifications">Certs</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-inner">
+    <div class="hero-layout">
+
+      <!-- النص -->
+      <div class="hero-text-col">
+        <div class="hero-tag">Available for new projects · Cairo, Egypt</div>
+        <h1>Alaa<br><em>Salah</em></h1>
+        <p class="hero-sub">Junior Data Analyst — I transform complex datasets into clear stories that drive strategic decisions and measurable growth.</p>
+        <div class="hero-stats">
+          <div class="hero-stat">
+            <span class="hero-stat-num">20+</span>
+            <span class="hero-stat-label">Projects Analyzed</span>
+          </div>
+          <div class="hero-stat">
+            <span class="hero-stat-num">19+</span>
+            <span class="hero-stat-label">Certifications</span>
+          </div>
+          <div class="hero-stat">
+            <span class="hero-stat-num">8+</span>
+            <span class="hero-stat-label">Tools Mastered</span>
+          </div>
+        </div>
+        <div class="hero-actions">
+          <a href="#projects" class="btn btn-primary">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            View My Work
+          </a>
+          <a href="#contact" class="btn btn-outline">Contact Me</a>
+          <a href="cv.pdf" target="_blank" class="btn btn-outline">Download CV</a>
+        </div>
+      </div>
+
+      <!-- الصورة -->
+      <div class="hero-photo-wrap">
+        <div class="hero-photo-ring"></div>
+        <div class="hero-photo-ring2"></div>
+        <img src="profile.jpg" alt="Alaa Salah" class="hero-photo">
+        <span class="hero-photo-badge">✦ Open to work</span>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="section-inner">
+    <div class="section-label"><span class="num">01 —</span> About</div>
+    <h2 class="section-title">My Story</h2>
+    <div class="about-grid fade-up">
+      <div class="about-text">
+        <p>My journey began with a genuine passion for understanding data and turning it into clear stories that drive smart, effective decisions. From the very beginning, I always asked: <span class="about-highlight">"How can we leverage this data to achieve real results?"</span></p>
+        <p>This curiosity led me to master modern tools and deeply understand each client's unique challenges. I believe data is more than just numbers — it's a lens to understand the world, predict future trends, and make informed decisions.</p>
+        <p>Backed by a <span class="about-highlight">Bachelor of Philosophy</span> and hands-on experience inside the <span class="about-highlight">MCIT Digital Pioneers initiative</span> with Digilians, I bring both rigor and narrative to every dataset I touch.</p>
+      </div>
+      <div class="about-skills">
+        <div>
+          <div class="skill-group-title">Programming &amp; Analysis</div>
+          <div class="skill-tags">
+            <span class="skill-tag">Python</span><span class="skill-tag">SQL</span><span class="skill-tag">Pandas</span><span class="skill-tag">NumPy</span><span class="skill-tag">Scikit-learn</span><span class="skill-tag">R</span>
+          </div>
+        </div>
+        <div>
+          <div class="skill-group-title">Databases &amp; Storage</div>
+          <div class="skill-tags">
+            <span class="skill-tag">MS SQL Server</span><span class="skill-tag">PostgreSQL</span><span class="skill-tag">MySQL</span><span class="skill-tag">Database Design</span>
+          </div>
+        </div>
+        <div>
+          <div class="skill-group-title">Visualization &amp; BI</div>
+          <div class="skill-tags">
+            <span class="skill-tag">Power BI</span><span class="skill-tag">Tableau</span><span class="skill-tag">Excel / DAX</span><span class="skill-tag">Matplotlib</span><span class="skill-tag">Seaborn</span>
+          </div>
+        </div>
+        <div>
+          <div class="skill-group-title">Statistics &amp; ML</div>
+          <div class="skill-tags">
+            <span class="skill-tag">SPSS</span><span class="skill-tag">Applied Statistics</span><span class="skill-tag">ML Models</span><span class="skill-tag">Deep Learning</span><span class="skill-tag">Orange Data Mining</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience" class="exp-section">
+  <div class="section-inner">
+    <div class="section-label"><span class="num">02 —</span> Experience</div>
+    <h2 class="section-title">Journey</h2>
+    <div class="timeline fade-up">
+      <div class="timeline-item">
+        <div class="timeline-date">Dec 2025<br>— Present</div>
+        <div class="timeline-content">
+          <div class="timeline-type">Experience</div>
+          <div class="timeline-title">Junior Applied AI &amp; Data Analyst</div>
+          <div class="timeline-org">Digital Pioneers Initiative — MCIT × Egyptian Military Academy × Digilians</div>
+          <div class="timeline-desc">Analyzed 20+ structured datasets using Python, SQL, Excel, and SPSS to generate actionable insights under government-grade standards.</div>
+          <div class="timeline-tags"><span class="mini-tag">Python</span><span class="mini-tag">SQL</span><span class="mini-tag">Power BI</span><span class="mini-tag">SPSS</span><span class="mini-tag">AI &amp; ML</span></div>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-date">2023<br>— Present</div>
+        <div class="timeline-content">
+          <div class="timeline-type">Experience</div>
+          <div class="timeline-title">Data Analytics — Independent &amp; Academic Projects</div>
+          <div class="timeline-org">Self-initiated · Coursework · Team collaborations</div>
+          <div class="timeline-desc">Delivered 10+ data analytics projects across BI dashboards, Excel analysis, and end-to-end Machine Learning pipelines.</div>
+          <div class="timeline-tags"><span class="mini-tag">Power BI</span><span class="mini-tag">Excel</span><span class="mini-tag">ML Pipelines</span><span class="mini-tag">EDA</span></div>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-date">2012<br>— 2015</div>
+        <div class="timeline-content">
+          <div class="timeline-type">Education</div>
+          <div class="timeline-title">Bachelor of Arts in Philosophy</div>
+          <div class="timeline-org">Suez Canal University — Grade: Good</div>
+          <div class="timeline-desc">A philosophy background trained me to ask better questions, structure arguments clearly, and communicate complex ideas in simple language.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EDUCATION -->
+<section id="education">
+  <div class="section-inner">
+    <div class="section-label"><span class="num">03 —</span> Education</div>
+    <h2 class="section-title">Academic Background</h2>
+    <div class="edu-card fade-up">
+      <div class="edu-icon">🎓</div>
+      <div class="edu-info">
+        <div class="edu-degree">Bachelor of Arts in Philosophy</div>
+        <div class="edu-uni">Suez Canal University</div>
+        <div class="edu-meta"><span>2012 – 2015</span><span>Grade: Good</span><span>Ismailia, Egypt</span></div>
+        <div class="edu-desc">Philosophy sharpened my ability to deconstruct complex problems, build structured arguments, and communicate insights clearly — a foundation I apply directly to data storytelling and analysis.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<style>
   .project-thumb { width: 100%; aspect-ratio: 16/9; overflow: hidden; border-radius: var(--radius) var(--radius) 0 0; }
   .project-thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
   .project-card.has-media { padding: 0; }
@@ -409,320 +683,6 @@
       </div>
     </div>
 
-  </div>
-</section>
-
-  /* CERTIFICATIONS */
-  .certs-section { background: var(--bg); }
-  .certs-gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(480px, 1fr));
-    gap: 1.5rem;
-  }
-  .cert-img-wrap {
-    border-radius: var(--radius);
-    overflow: hidden;
-    border: 1px solid var(--border);
-    background: var(--surface);
-    transition: all 0.3s;
-    cursor: pointer;
-    position: relative;
-  }
-  .cert-img-wrap::before {
-    content: '';
-    position: absolute;
-    top: 0; left: 0; right: 0;
-    height: 2px;
-    background: linear-gradient(90deg, var(--accent), transparent);
-    opacity: 0;
-    transition: opacity 0.3s;
-    z-index: 1;
-  }
-  .cert-img-wrap:hover { border-color: var(--accent); transform: translateY(-3px); box-shadow: 0 12px 40px rgba(0,212,161,0.15); }
-  .cert-img-wrap:hover::before { opacity: 1; }
-  .cert-img-wrap img { width: 100%; height: auto; display: block; transition: transform 0.4s ease; }
-  .cert-img-wrap:hover img { transform: scale(1.02); }
-  .cert-label { padding: 0.75rem 1rem; background: var(--surface2); border-top: 1px solid var(--border); font-size: 13px; font-weight: 500; color: var(--text); }
-  .cert-label span { display: block; font-size: 11px; color: var(--accent); font-family: var(--mono); margin-top: 0.15rem; }
-
-  /* LIGHTBOX */
-  .lightbox { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.93); z-index: 1000; align-items: center; justify-content: center; backdrop-filter: blur(8px); }
-  .lightbox.active { display: flex; }
-  .lightbox img { max-width: 90vw; max-height: 90vh; border-radius: var(--radius); box-shadow: 0 24px 80px rgba(0,0,0,0.8); border: 1px solid var(--border2); }
-  .lightbox-close { position: absolute; top: 1.5rem; right: 1.5rem; width: 44px; height: 44px; border-radius: 50%; background: var(--surface); border: 1px solid var(--border2); color: var(--text); font-size: 20px; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: all 0.2s; }
-  .lightbox-close:hover { border-color: var(--accent); color: var(--accent); }
-
-  /* VOLUNTEERING */
-  .vol-section { background: var(--bg2); }
-  .vol-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 2rem 2.5rem; display: flex; gap: 2rem; align-items: flex-start; transition: border-color 0.2s; }
-  .vol-card:hover { border-color: var(--accent); }
-  .vol-icon { width: 48px; height: 48px; border-radius: var(--radius-sm); background: var(--accent-dim); border: 1px solid var(--accent-glow); display: flex; align-items: center; justify-content: center; font-size: 1.4rem; flex-shrink: 0; }
-  .vol-info { flex: 1; }
-  .vol-role { font-size: 1.05rem; font-weight: 600; color: var(--text); margin-bottom: 0.25rem; }
-  .vol-org { font-size: 14px; color: var(--accent); font-family: var(--mono); margin-bottom: 0.5rem; }
-  .vol-period { font-size: 13px; color: var(--text3); font-family: var(--mono); margin-bottom: 1rem; }
-  .vol-desc { font-size: 14px; color: var(--text2); line-height: 1.7; }
-
-  /* LANGUAGES */
-  .langs-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 1rem; }
-  .lang-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.5rem; transition: border-color 0.2s; }
-  .lang-card:hover { border-color: var(--accent); }
-  .lang-flag { font-size: 2rem; margin-bottom: 0.75rem; }
-  .lang-name { font-size: 1.1rem; font-weight: 600; color: var(--text); margin-bottom: 0.25rem; }
-  .lang-level { font-size: 13px; color: var(--accent); font-family: var(--mono); }
-  .lang-desc { font-size: 13px; color: var(--text3); margin-top: 0.5rem; }
-
-  /* CONTACT */
-  .contact-section { background: var(--bg2); border-top: 1px solid var(--border); }
-  .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start; }
-  .contact-info { display: flex; flex-direction: column; gap: 1.5rem; }
-  .contact-heading { font-family: var(--serif); font-size: 2.5rem; color: var(--text); line-height: 1.15; margin-bottom: 0.5rem; }
-  .contact-sub { font-size: 15px; color: var(--text2); line-height: 1.7; }
-  .contact-links { display: flex; flex-direction: column; gap: 1rem; margin-top: 1rem; }
-  .contact-link { display: flex; align-items: center; gap: 1rem; text-decoration: none; padding: 1rem 1.25rem; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-sm); transition: all 0.2s; }
-  .contact-link:hover { border-color: var(--accent); background: var(--accent-dim); }
-  .contact-link-icon { width: 36px; height: 36px; border-radius: 8px; background: var(--bg); display: flex; align-items: center; justify-content: center; font-size: 1rem; flex-shrink: 0; color: var(--accent); }
-  .contact-link-info { flex: 1; }
-  .contact-link-label { font-size: 12px; color: var(--text3); font-family: var(--mono); margin-bottom: 0.1rem; }
-  .contact-link-value { font-size: 14px; color: var(--text); font-weight: 500; }
-  .contact-link:hover .contact-link-value { color: var(--accent); }
-  .contact-form { display: flex; flex-direction: column; gap: 1rem; }
-  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
-  .form-group { display: flex; flex-direction: column; gap: 0.4rem; }
-  label { font-size: 12px; color: var(--text3); font-family: var(--mono); letter-spacing: 0.05em; }
-  input, textarea { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 0.75rem 1rem; font-size: 14px; color: var(--text); font-family: var(--sans); outline: none; transition: border-color 0.2s; resize: vertical; }
-  input:focus, textarea:focus { border-color: var(--accent); }
-  input::placeholder, textarea::placeholder { color: var(--text3); }
-  textarea { min-height: 140px; }
-
-  /* FOOTER */
-  footer { padding: 2rem; text-align: center; border-top: 1px solid var(--border); font-size: 13px; color: var(--text3); font-family: var(--mono); }
-  footer span { color: var(--accent); }
-
-  /* ANIMATIONS */
-  .fade-up { opacity: 0; transform: translateY(30px); transition: opacity 0.6s ease, transform 0.6s ease; }
-  .fade-up.visible { opacity: 1; transform: translateY(0); }
-
-  /* RESPONSIVE */
-  @media (max-width: 768px) {
-    nav { padding: 1rem; }
-    .nav-links { gap: 1rem; }
-    .nav-links a { font-size: 12px; }
-    .hero { padding: 5rem 1.25rem 3rem; }
-    .hero-layout { grid-template-columns: 1fr; gap: 2rem; }
-    .hero-photo-wrap { width: 170px; margin: 0 auto; order: -1; }
-    .hero-photo { width: 170px; height: 170px; }
-    .about-grid { grid-template-columns: 1fr; gap: 2rem; }
-    .projects-grid { grid-template-columns: 1fr; }
-    .project-card.featured { grid-column: span 1; }
-    .contact-grid { grid-template-columns: 1fr; gap: 2rem; }
-    .form-row { grid-template-columns: 1fr; }
-    .timeline::before { left: 0; }
-    .timeline-item { grid-template-columns: 1fr; gap: 0.5rem; padding-left: 1.5rem; }
-    .timeline-item::before { left: -4px; }
-    .timeline-date { text-align: left; padding-right: 0; }
-    section { padding: 3.5rem 1.25rem; }
-    .edu-card { flex-direction: column; gap: 1rem; }
-    .vol-card { flex-direction: column; gap: 1rem; }
-    .certs-gallery { grid-template-columns: 1fr; }
-  }
-</style>
-</head>
-<body>
-
-<!-- NAV -->
-<nav>
-  <div class="nav-logo">alaa.salah()</div>
-  <ul class="nav-links">
-    <li><a href="#about">About</a></li>
-    <li><a href="#experience">Experience</a></li>
-    <li><a href="#projects">Projects</a></li>
-    <li><a href="#certifications">Certs</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
-</nav>
-
-<!-- HERO -->
-<section class="hero" id="home">
-  <div class="hero-inner">
-    <div class="hero-layout">
-
-      <!-- النص -->
-      <div class="hero-text-col">
-        <div class="hero-tag">Available for new projects · Cairo, Egypt</div>
-        <h1>Alaa<br><em>Salah</em></h1>
-        <p class="hero-sub">Junior Data Analyst — I transform complex datasets into clear stories that drive strategic decisions and measurable growth.</p>
-        <div class="hero-stats">
-          <div class="hero-stat">
-            <span class="hero-stat-num">20+</span>
-            <span class="hero-stat-label">Projects Analyzed</span>
-          </div>
-          <div class="hero-stat">
-            <span class="hero-stat-num">19+</span>
-            <span class="hero-stat-label">Certifications</span>
-          </div>
-          <div class="hero-stat">
-            <span class="hero-stat-num">8+</span>
-            <span class="hero-stat-label">Tools Mastered</span>
-          </div>
-        </div>
-        <div class="hero-actions">
-          <a href="#projects" class="btn btn-primary">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-            View My Work
-          </a>
-          <a href="#contact" class="btn btn-outline">Contact Me</a>
-          <a href="cv.pdf" target="_blank" class="btn btn-outline">Download CV</a>
-        </div>
-      </div>
-
-      <!-- الصورة -->
-      <div class="hero-photo-wrap">
-        <div class="hero-photo-ring"></div>
-        <div class="hero-photo-ring2"></div>
-        <img src="profile.jpg" alt="Alaa Salah" class="hero-photo">
-        <span class="hero-photo-badge">✦ Open to work</span>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- ABOUT -->
-<section id="about">
-  <div class="section-inner">
-    <div class="section-label"><span class="num">01 —</span> About</div>
-    <h2 class="section-title">My Story</h2>
-    <div class="about-grid fade-up">
-      <div class="about-text">
-        <p>My journey began with a genuine passion for understanding data and turning it into clear stories that drive smart, effective decisions. From the very beginning, I always asked: <span class="about-highlight">"How can we leverage this data to achieve real results?"</span></p>
-        <p>This curiosity led me to master modern tools and deeply understand each client's unique challenges. I believe data is more than just numbers — it's a lens to understand the world, predict future trends, and make informed decisions.</p>
-        <p>Backed by a <span class="about-highlight">Bachelor of Philosophy</span> and hands-on experience inside the <span class="about-highlight">MCIT Digital Pioneers initiative</span> with Digilians, I bring both rigor and narrative to every dataset I touch.</p>
-      </div>
-      <div class="about-skills">
-        <div>
-          <div class="skill-group-title">Programming &amp; Analysis</div>
-          <div class="skill-tags">
-            <span class="skill-tag">Python</span><span class="skill-tag">SQL</span><span class="skill-tag">Pandas</span><span class="skill-tag">NumPy</span><span class="skill-tag">Scikit-learn</span><span class="skill-tag">R</span>
-          </div>
-        </div>
-        <div>
-          <div class="skill-group-title">Databases &amp; Storage</div>
-          <div class="skill-tags">
-            <span class="skill-tag">MS SQL Server</span><span class="skill-tag">PostgreSQL</span><span class="skill-tag">MySQL</span><span class="skill-tag">Database Design</span>
-          </div>
-        </div>
-        <div>
-          <div class="skill-group-title">Visualization &amp; BI</div>
-          <div class="skill-tags">
-            <span class="skill-tag">Power BI</span><span class="skill-tag">Tableau</span><span class="skill-tag">Excel / DAX</span><span class="skill-tag">Matplotlib</span><span class="skill-tag">Seaborn</span>
-          </div>
-        </div>
-        <div>
-          <div class="skill-group-title">Statistics &amp; ML</div>
-          <div class="skill-tags">
-            <span class="skill-tag">SPSS</span><span class="skill-tag">Applied Statistics</span><span class="skill-tag">ML Models</span><span class="skill-tag">Deep Learning</span><span class="skill-tag">Orange Data Mining</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- EXPERIENCE -->
-<section id="experience" class="exp-section">
-  <div class="section-inner">
-    <div class="section-label"><span class="num">02 —</span> Experience</div>
-    <h2 class="section-title">Journey</h2>
-    <div class="timeline fade-up">
-      <div class="timeline-item">
-        <div class="timeline-date">Dec 2025<br>— Present</div>
-        <div class="timeline-content">
-          <div class="timeline-type">Experience</div>
-          <div class="timeline-title">Junior Applied AI &amp; Data Analyst</div>
-          <div class="timeline-org">Digital Pioneers Initiative — MCIT × Egyptian Military Academy × Digilians</div>
-          <div class="timeline-desc">Analyzed 20+ structured datasets using Python, SQL, Excel, and SPSS to generate actionable insights under government-grade standards.</div>
-          <div class="timeline-tags"><span class="mini-tag">Python</span><span class="mini-tag">SQL</span><span class="mini-tag">Power BI</span><span class="mini-tag">SPSS</span><span class="mini-tag">AI &amp; ML</span></div>
-        </div>
-      </div>
-      <div class="timeline-item">
-        <div class="timeline-date">2023<br>— Present</div>
-        <div class="timeline-content">
-          <div class="timeline-type">Experience</div>
-          <div class="timeline-title">Data Analytics — Independent &amp; Academic Projects</div>
-          <div class="timeline-org">Self-initiated · Coursework · Team collaborations</div>
-          <div class="timeline-desc">Delivered 10+ data analytics projects across BI dashboards, Excel analysis, and end-to-end Machine Learning pipelines.</div>
-          <div class="timeline-tags"><span class="mini-tag">Power BI</span><span class="mini-tag">Excel</span><span class="mini-tag">ML Pipelines</span><span class="mini-tag">EDA</span></div>
-        </div>
-      </div>
-      <div class="timeline-item">
-        <div class="timeline-date">2012<br>— 2015</div>
-        <div class="timeline-content">
-          <div class="timeline-type">Education</div>
-          <div class="timeline-title">Bachelor of Arts in Philosophy</div>
-          <div class="timeline-org">Suez Canal University — Grade: Good</div>
-          <div class="timeline-desc">A philosophy background trained me to ask better questions, structure arguments clearly, and communicate complex ideas in simple language.</div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- EDUCATION -->
-<section id="education">
-  <div class="section-inner">
-    <div class="section-label"><span class="num">03 —</span> Education</div>
-    <h2 class="section-title">Academic Background</h2>
-    <div class="edu-card fade-up">
-      <div class="edu-icon">🎓</div>
-      <div class="edu-info">
-        <div class="edu-degree">Bachelor of Arts in Philosophy</div>
-        <div class="edu-uni">Suez Canal University</div>
-        <div class="edu-meta"><span>2012 – 2015</span><span>Grade: Good</span><span>Ismailia, Egypt</span></div>
-        <div class="edu-desc">Philosophy sharpened my ability to deconstruct complex problems, build structured arguments, and communicate insights clearly — a foundation I apply directly to data storytelling and analysis.</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- PROJECTS -->
-<section id="projects" class="projects-section">
-  <div class="section-inner">
-    <div class="section-label"><span class="num">04 —</span> Selected Work</div>
-    <h2 class="section-title">Projects</h2>
-    <div class="projects-grid fade-up">
-      <div class="project-card featured">
-        <div class="project-header">
-          <div class="project-badges"><span class="badge badge-featured">Featured</span><span class="badge badge-team">Team Project</span></div>
-          <div class="project-arrow">↗</div>
-        </div>
-        <div class="project-title">TechUni Intelligence Hub — University Data System</div>
-        <div class="project-problem"><strong>Problem</strong>A university needed a unified data management and analytics system across all academic departments.</div>
-        <div class="project-outcome"><strong>Outcome</strong>Delivered a full-stack solution: SQL Server design (12 tables), Python EDA, Orange ML workflows, Power BI dashboard, and a live web dashboard on Netlify.</div>
-        <div class="project-tools"><span class="tool-tag">MS SQL Server</span><span class="tool-tag">Python</span><span class="tool-tag">Pandas</span><span class="tool-tag">Scikit-learn</span><span class="tool-tag">Orange</span><span class="tool-tag">Power BI</span><span class="tool-tag">HTML5</span><span class="tool-tag">CSS3</span><span class="tool-tag">JavaScript</span><span class="tool-tag">Netlify</span></div>
-      </div>
-      <div class="project-card">
-        <div class="project-header"><div class="project-badges"><span class="badge badge-featured">Power BI</span></div><div class="project-arrow">↗</div></div>
-        <div class="project-title">Sales Performance Dashboard</div>
-        <div class="project-problem"><strong>Problem</strong>Management lacked real-time visibility into monthly sales KPIs and product performance.</div>
-        <div class="project-outcome"><strong>Outcome</strong>An interactive Power BI dashboard enabling data-driven decisions on revenue, profit margins, and top-performing products.</div>
-        <div class="project-tools"><span class="tool-tag">Power BI</span><span class="tool-tag">Excel</span><span class="tool-tag">DAX</span><span class="tool-tag">Data Modeling</span></div>
-      </div>
-      <div class="project-card">
-        <div class="project-header"><div class="project-badges"><span class="badge" style="background:rgba(100,255,200,0.1);color:#00d4a1;border:1px solid rgba(0,212,161,0.2)">Excel</span></div><div class="project-arrow">↗</div></div>
-        <div class="project-title">Sales Data Analysis with Excel</div>
-        <div class="project-problem"><strong>Problem</strong>Raw sales data was unstructured and inconsistent, making it impossible to identify revenue trends.</div>
-        <div class="project-outcome"><strong>Outcome</strong>Cleaned and modeled the dataset into a pivot-based interactive dashboard highlighting key revenue metrics.</div>
-        <div class="project-tools"><span class="tool-tag">Excel</span><span class="tool-tag">Pivot Tables</span><span class="tool-tag">Charts</span><span class="tool-tag">Conditional Formatting</span></div>
-      </div>
-      <div class="project-card">
-        <div class="project-header"><div class="project-badges"><span class="badge badge-ml">Machine Learning</span></div><div class="project-arrow">↗</div></div>
-        <div class="project-title">Body Performance — ML Classification &amp; Regression</div>
-        <div class="project-problem"><strong>Problem</strong>Needed a model to predict body performance scores from physical fitness attributes.</div>
-        <div class="project-outcome"><strong>Outcome</strong>Built a complete end-to-end ML pipeline achieving strong accuracy through feature engineering and tuned models.</div>
-        <div class="project-tools"><span class="tool-tag">Python</span><span class="tool-tag">Pandas</span><span class="tool-tag">NumPy</span><span class="tool-tag">Matplotlib</span><span class="tool-tag">Seaborn</span><span class="tool-tag">Scikit-learn</span></div>
-      </div>
-    </div>
   </div>
 </section>
 
