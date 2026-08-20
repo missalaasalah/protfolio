@@ -148,7 +148,7 @@
 .project-link:hover {
   opacity: 0.7;
 }
-
+  
   /* CERTIFICATIONS */
   .certs-section { background: var(--bg); }
   .certs-gallery {
@@ -181,12 +181,6 @@
   .cert-img-wrap:hover img { transform: scale(1.02); }
   .cert-label { padding: 0.75rem 1rem; background: var(--surface2); border-top: 1px solid var(--border); font-size: 13px; font-weight: 500; color: var(--text); }
   .cert-label span { display: block; font-size: 11px; color: var(--accent); font-family: var(--mono); margin-top: 0.15rem; }
-  .cert-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; width: 100%; max-width: 480px; transition: all 0.3s; }
-  .cert-card:hover { border-color: var(--accent); transform: translateY(-3px); }
-  .cert-image { width: 100%; height: auto; display: block; }
-  .cert-body { padding: 0.75rem 1rem; background: var(--surface2); border-top: 1px solid var(--border); }
-  .cert-title { font-size: 13px; font-weight: 500; color: var(--text); }
-  .cert-issuer { font-size: 11px; color: var(--accent); font-family: var(--mono); margin-top: 0.15rem; }
 
   /* LIGHTBOX */
   .lightbox { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.93); z-index: 1000; align-items: center; justify-content: center; backdrop-filter: blur(8px); }
@@ -428,444 +422,441 @@
   </div>
 </section>
 
-<!-- PROJECTS -->
 <section class="projects-section" id="projects">
-  <div class="section-inner">
-    <div class="section-label"><span class="num">04 —</span> Projects</div>
+  <div class="section-header">
     <h2 class="section-title">Projects</h2>
-    <div class="projects-grid fade-up">
+  </div>
+  <div class="projects-grid">
 
-      <!-- 1 TechUni Featured + Link -->
-      <div class="project-card featured has-media">
-        <div class="project-thumb">
-          <img src="https://raw.githubusercontent.com/missalaasalah/protfolio/main/techuni_cover.png" alt="TechUni ERD">
+    <!-- 1 TechUni Featured + Link -->
+    <div class="project-card featured has-media">
+      <div class="project-thumb">
+        <img src="https://raw.githubusercontent.com/missalaasalah/protfolio/main/techuni_cover.png" alt="TechUni ERD">
+      </div>
+      <div class="project-body">
+        <div class="project-header">
+          <div class="project-badges">
+            <span class="badge badge-featured">Featured</span>
+            <span class="badge badge-team">Team Project</span>
+          </div>
+          <a href="https://drive.google.com/drive/folders/1OZH-mVvcmiTYF1l5D97tDEIzT1dheeuk" target="_blank" rel="noopener noreferrer" class="project-arrow">↗</a>
         </div>
-        <div class="project-body">
-          <div class="project-header">
-            <div class="project-badges">
-              <span class="badge badge-featured">Featured</span>
-              <span class="badge badge-team">Team Project</span>
-            </div>
-            <a href="https://drive.google.com/drive/folders/1OZH-mVvcmiTYF1l5D97tDEIzT1dheeuk" target="_blank" rel="noopener noreferrer" class="project-arrow">↗</a>
-          </div>
-          <p class="project-title">TechUni Intelligence Hub — University Data System</p>
-          <div class="project-problem"><strong>Problem</strong> A university needed a unified data management and analytics system across all academic departments.</div>
-          <div class="project-outcome"><strong>Outcome</strong> Delivered a full-stack solution: SQL Server design (12 tables), Python EDA, Orange ML workflows, Power BI dashboard, and a live web dashboard on Netlify.</div>
-          <div class="project-tools">
-            <span class="tool-tag">MS SQL Server</span>
-            <span class="tool-tag">Python</span>
-            <span class="tool-tag">Pandas</span>
-            <span class="tool-tag">Scikit-learn</span>
-            <span class="tool-tag">Orange</span>
-            <span class="tool-tag">Power BI</span>
-            <span class="tool-tag">HTML5</span>
-            <span class="tool-tag">CSS3</span>
-            <span class="tool-tag">JavaScript</span>
-            <span class="tool-tag">Netlify</span>
-          </div>
+        <p class="project-title">TechUni Intelligence Hub — University Data System</p>
+        <div class="project-problem"><strong>Problem</strong> A university needed a unified data management and analytics system across all academic departments.</div>
+        <div class="project-outcome"><strong>Outcome</strong> Delivered a full-stack solution: SQL Server design (12 tables), Python EDA, Orange ML workflows, Power BI dashboard, and a live web dashboard on Netlify.</div>
+        <div class="project-tools">
+          <span class="tool-tag">MS SQL Server</span>
+          <span class="tool-tag">Python</span>
+          <span class="tool-tag">Pandas</span>
+          <span class="tool-tag">Scikit-learn</span>
+          <span class="tool-tag">Orange</span>
+          <span class="tool-tag">Power BI</span>
+          <span class="tool-tag">HTML5</span>
+          <span class="tool-tag">CSS3</span>
+          <span class="tool-tag">JavaScript</span>
+          <span class="tool-tag">Netlify</span>
         </div>
       </div>
-
-      <!-- 2 GTX Sales Dashboard -->
-      <div class="project-card has-media">
-        <div class="project-thumb">
-          <img src="https://raw.githubusercontent.com/missalaasalah/protfolio/main/cover_01_small.png" alt="GTX Sales Dashboard">
-        </div>
-        <div class="project-body">
-          <div class="project-header">
-            <div class="project-badges"><span class="badge" style="background:rgba(100,130,255,0.1);color:#8899ff;border:1px solid rgba(100,130,255,0.2)">Power BI</span></div>
-            <div class="project-arrow">↗</div>
-          </div>
-          <p class="project-title">GTX Sales Dashboard — Sales Analytics</p>
-          <div class="project-problem"><strong>Problem</strong> Sales team needed a unified view of KPIs across sectors, products, managers, and agents.</div>
-          <div class="project-outcome"><strong>Outcome</strong> Built an interactive Power BI dashboard tracking sector performance, product waterfall, manager breakdown, and top sales agents.</div>
-          <div class="project-tools">
-            <span class="tool-tag">Power BI</span>
-            <span class="tool-tag">DAX</span>
-            <span class="tool-tag">Data Modeling</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- 3 Sales Dashboard Multi-Year -->
-      <div class="project-card has-media">
-        <div class="project-thumb">
-          <img src="https://raw.githubusercontent.com/missalaasalah/protfolio/main/cover_02_small.png" alt="Sales Dashboard Multi-Year">
-        </div>
-        <div class="project-body">
-          <div class="project-header">
-            <div class="project-badges"><span class="badge" style="background:rgba(100,130,255,0.1);color:#8899ff;border:1px solid rgba(100,130,255,0.2)">Power BI</span></div>
-            <div class="project-arrow">↗</div>
-          </div>
-          <p class="project-title">Sales Dashboard — Multi-Year Analysis</p>
-          <div class="project-problem"><strong>Problem</strong> Management needed to compare sales performance across multiple years with flexible filtering.</div>
-          <div class="project-outcome"><strong>Outcome</strong> Designed a multi-year sales dashboard with month and year slicers showing $85.26M total, broken down by region, product, and agent.</div>
-          <div class="project-tools">
-            <span class="tool-tag">Power BI</span>
-            <span class="tool-tag">DAX</span>
-            <span class="tool-tag">Data Modeling</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- 4 Sales by Office Location -->
-      <div class="project-card has-media">
-        <div class="project-thumb">
-          <img src="https://raw.githubusercontent.com/missalaasalah/protfolio/main/cover_03_final.png" alt="Sales by Office Location">
-        </div>
-        <div class="project-body">
-          <div class="project-header">
-            <div class="project-badges"><span class="badge" style="background:rgba(100,130,255,0.1);color:#8899ff;border:1px solid rgba(100,130,255,0.2)">Power BI</span></div>
-            <div class="project-arrow">↗</div>
-          </div>
-          <p class="project-title">Sales by Office Location — Geographic Analysis</p>
-          <div class="project-problem"><strong>Problem</strong> Leadership lacked visibility into how each office contributed to overall sales across 15 countries.</div>
-          <div class="project-outcome"><strong>Outcome</strong> Created a multi-page geographic dashboard with flag slicers, country timeline, and drill-through by location.</div>
-          <div class="project-tools">
-            <span class="tool-tag">Power BI</span>
-            <span class="tool-tag">DAX</span>
-            <span class="tool-tag">Maps</span>
-            <span class="tool-tag">Data Modeling</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- 5 GTX Multi-Page Report -->
-      <div class="project-card has-media">
-        <div class="project-thumb">
-          <img src="https://raw.githubusercontent.com/missalaasalah/protfolio/main/cover_05_small.png" alt="GTX Multi-Page Report">
-        </div>
-        <div class="project-body">
-          <div class="project-header">
-            <div class="project-badges"><span class="badge" style="background:rgba(100,130,255,0.1);color:#8899ff;border:1px solid rgba(100,130,255,0.2)">Power BI</span></div>
-            <div class="project-arrow">↗</div>
-          </div>
-          <p class="project-title">GTX Sales Dashboard — Multi-Page Report</p>
-          <div class="project-problem"><strong>Problem</strong> Stakeholders needed a structured multi-page report covering sales from different angles.</div>
-          <div class="project-outcome"><strong>Outcome</strong> Developed a multi-page Power BI report with treemap, waterfall, and donut charts across product, month, agent, and region views.</div>
-          <div class="project-tools">
-            <span class="tool-tag">Power BI</span>
-            <span class="tool-tag">Treemap</span>
-            <span class="tool-tag">Waterfall</span>
-            <span class="tool-tag">DAX</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- 6 GTX Green Theme -->
-      <div class="project-card has-media">
-        <div class="project-thumb">
-          <img src="https://raw.githubusercontent.com/missalaasalah/protfolio/main/cover_06_small.png" alt="GTX Green Theme">
-        </div>
-        <div class="project-body">
-          <div class="project-header">
-            <div class="project-badges"><span class="badge" style="background:rgba(100,130,255,0.1);color:#8899ff;border:1px solid rgba(100,130,255,0.2)">Power BI</span></div>
-            <div class="project-arrow">↗</div>
-          </div>
-          <p class="project-title">GTX Sales Dashboard — Green Theme</p>
-          <div class="project-problem"><strong>Problem</strong> Client requested a branded green-theme dashboard with map, decomposition tree, and key influencers.</div>
-          <div class="project-outcome"><strong>Outcome</strong> Delivered a polished green-branded dashboard with sales by map, decomposition, key influencers, and manager breakdown showing $20.94M total.</div>
-          <div class="project-tools">
-            <span class="tool-tag">Power BI</span>
-            <span class="tool-tag">Map Visual</span>
-            <span class="tool-tag">Key Influencers</span>
-            <span class="tool-tag">DAX</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- 7 Global Sales Europe -->
-      <div class="project-card has-media">
-        <div class="project-thumb">
-          <img src="https://raw.githubusercontent.com/missalaasalah/protfolio/main/cover_07_small.png" alt="Global Sales Europe">
-        </div>
-        <div class="project-body">
-          <div class="project-header">
-            <div class="project-badges"><span class="badge" style="background:rgba(100,130,255,0.1);color:#8899ff;border:1px solid rgba(100,130,255,0.2)">Power BI</span></div>
-            <div class="project-arrow">↗</div>
-          </div>
-          <p class="project-title">Global Sales Analytics — Europe Market</p>
-          <div class="project-problem"><strong>Problem</strong> The European team needed a dedicated view of sales by category, ship mode, and segment across 2011-2014.</div>
-          <div class="project-outcome"><strong>Outcome</strong> Built a dark-themed Europe market dashboard showing $5.49M total with gauge, donut, bar, and stream charts filtered by year, month, and segment.</div>
-          <div class="project-tools">
-            <span class="tool-tag">Power BI</span>
-            <span class="tool-tag">DAX</span>
-            <span class="tool-tag">Data Modeling</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- 8 GTX Full Dataset -->
-      <div class="project-card has-media">
-        <div class="project-thumb">
-          <img src="https://raw.githubusercontent.com/missalaasalah/protfolio/main/cover_08_small.png" alt="GTX Full Dataset">
-        </div>
-        <div class="project-body">
-          <div class="project-header">
-            <div class="project-badges"><span class="badge" style="background:rgba(100,130,255,0.1);color:#8899ff;border:1px solid rgba(100,130,255,0.2)">Power BI</span></div>
-            <div class="project-arrow">↗</div>
-          </div>
-          <p class="project-title">GTX Sales Dashboard — Full Dataset</p>
-          <div class="project-problem"><strong>Problem</strong> The company needed a complete view of 85.26M in sales across all sectors, products, managers, and 30+ agents.</div>
-          <div class="project-outcome"><strong>Outcome</strong> Created a full-dataset dashboard with sector area chart, product waterfall, manager donut, and full agent bar chart with month/year filters.</div>
-          <div class="project-tools">
-            <span class="tool-tag">Power BI</span>
-            <span class="tool-tag">DAX</span>
-            <span class="tool-tag">Data Modeling</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- 9 Restaurant Sales -->
-      <div class="project-card has-media">
-        <div class="project-thumb">
-          <img src="https://raw.githubusercontent.com/missalaasalah/protfolio/main/cover_09_small.png" alt="Restaurant Sales">
-        </div>
-        <div class="project-body">
-          <div class="project-header">
-            <div class="project-badges"><span class="badge" style="background:rgba(100,130,255,0.1);color:#8899ff;border:1px solid rgba(100,130,255,0.2)">Power BI</span></div>
-            <div class="project-arrow">↗</div>
-          </div>
-          <p class="project-title">Restaurant Sales — Food &amp; Beverage</p>
-          <div class="project-problem"><strong>Problem</strong> A restaurant needed to identify top-selling items and understand revenue distribution across food categories.</div>
-          <div class="project-outcome"><strong>Outcome</strong> Built a food and beverage dashboard showing $159.22K total sales, top 7 items, and category breakdown with Italian cuisine leading at $49.46K.</div>
-          <div class="project-tools">
-            <span class="tool-tag">Power BI</span>
-            <span class="tool-tag">DAX</span>
-            <span class="tool-tag">Food &amp; Beverage</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- 10 Problem-Based Thinking -->
-      <div class="project-card has-media">
-        <div class="project-thumb">
-          <img src="https://raw.githubusercontent.com/missalaasalah/protfolio/main/cover_10_small.png" alt="Problem-Based Thinking">
-        </div>
-        <div class="project-body">
-          <div class="project-header">
-            <div class="project-badges"><span class="badge" style="background:rgba(255,160,80,0.1);color:#ffaa50;border:1px solid rgba(255,160,80,0.2)">PowerPoint</span></div>
-            <div class="project-arrow">↗</div>
-          </div>
-          <p class="project-title">Problem-Based Thinking — Presentation</p>
-          <div class="project-problem"><strong>Problem</strong> Needed to communicate a structured problem-solving methodology covering PBT steps and Socratic thinking.</div>
-          <div class="project-outcome"><strong>Outcome</strong> Designed a 6-section presentation covering PBT introduction, steps, practical examples, reflection, Socrates philosophy, and a summary.</div>
-          <div class="project-tools">
-            <span class="tool-tag">PowerPoint</span>
-            <span class="tool-tag">Presentation Design</span>
-            <span class="tool-tag">Storytelling</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- 11 Sales Analytics Excel -->
-      <div class="project-card has-media">
-        <div class="project-thumb">
-          <img src="https://raw.githubusercontent.com/missalaasalah/protfolio/main/cover_11_small.png" alt="Sales Analytics Excel">
-        </div>
-        <div class="project-body">
-          <div class="project-header">
-            <div class="project-badges"><span class="badge" style="background:rgba(34,197,94,0.1);color:#16a34a;border:1px solid rgba(34,197,94,0.2)">Excel</span></div>
-            <div class="project-arrow">↗</div>
-          </div>
-          <p class="project-title">Sales Analytics Dashboard — Excel</p>
-          <div class="project-problem"><strong>Problem</strong> Raw sales data was unstructured and inconsistent, making it impossible to identify revenue trends.</div>
-          <div class="project-outcome"><strong>Outcome</strong> Cleaned and modeled the dataset into a pivot-based interactive dashboard highlighting key revenue metrics by country, segment, category, and region.</div>
-          <div class="project-tools">
-            <span class="tool-tag">Excel</span>
-            <span class="tool-tag">Pivot Tables</span>
-            <span class="tool-tag">Charts</span>
-            <span class="tool-tag">Conditional Formatting</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- 12 Revenue by Region -->
-      <div class="project-card has-media">
-        <div class="project-thumb">
-          <img src="https://raw.githubusercontent.com/missalaasalah/protfolio/main/cover_12_small.png" alt="Revenue by Region">
-        </div>
-        <div class="project-body">
-          <div class="project-header">
-            <div class="project-badges"><span class="badge" style="background:rgba(100,130,255,0.1);color:#8899ff;border:1px solid rgba(100,130,255,0.2)">Power BI</span></div>
-            <div class="project-arrow">↗</div>
-          </div>
-          <p class="project-title">Revenue by Region — Global Revenue Map</p>
-          <div class="project-problem"><strong>Problem</strong> The business needed a geographic breakdown of revenue across Asia, Europe, and North America by product and payment method.</div>
-          <div class="project-outcome"><strong>Outcome</strong> Built a global revenue map with Bing Maps, product bar chart, and payment method donut showing 63.51% via primary payment method.</div>
-          <div class="project-tools">
-            <span class="tool-tag">Power BI</span>
-            <span class="tool-tag">Bing Maps</span>
-            <span class="tool-tag">DAX</span>
-            <span class="tool-tag">Data Modeling</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- 13 Body Performance ML + Link -->
-      <div class="project-card has-media">
-        <div class="project-thumb">
-          <img src="https://raw.githubusercontent.com/missalaasalah/protfolio/main/bodyperf_cover.png" alt="Body Performance ML">
-        </div>
-        <div class="project-body">
-          <div class="project-header">
-            <div class="project-badges"><span class="badge badge-ml">Machine Learning</span></div>
-            <a href="https://drive.google.com/drive/folders/108fFeBf72nT8IAOR_gthvtzHEsMhtOA7" target="_blank" rel="noopener noreferrer" class="project-arrow">↗</a>
-          </div>
-          <p class="project-title">Body Performance — ML Classification &amp; Regression</p>
-          <div class="project-problem"><strong>Problem</strong> Needed a model to predict body performance scores from physical fitness attributes.</div>
-          <div class="project-outcome"><strong>Outcome</strong> Built a complete end-to-end ML pipeline achieving strong accuracy through feature engineering and tuned models.</div>
-          <div class="project-tools">
-            <span class="tool-tag">Python</span>
-            <span class="tool-tag">Pandas</span>
-            <span class="tool-tag">NumPy</span>
-            <span class="tool-tag">Matplotlib</span>
-            <span class="tool-tag">Seaborn</span>
-            <span class="tool-tag">Scikit-learn</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- 14 AI Market RAG -->
-      <div class="project-card has-media">
-        <div class="project-thumb">
-          <img src="https://raw.githubusercontent.com/missalaasalah/protfolio/main/Screenshot%202026-07-20%20085246.png" alt="AI Market RAG">
-        </div>
-        <div class="project-body">
-          <div class="project-header">
-            <div class="project-badges"><span class="badge badge-ml">Machine Learning</span></div>
-            <a href="https://github.com/missalaasalah/AI-Market-RAG-v" target="_blank" rel="noopener noreferrer" class="project-arrow">↗</a>
-          </div>
-          <p class="project-title">AI Market RAG — Semantic Search over AI Index Report</p>
-          <div class="project-problem"><strong>Problem</strong> Researchers needed a fast way to search and query Stanford's AI Index Report 2025 without manually reading through hundreds of pages.</div>
-          <div class="project-outcome"><strong>Outcome</strong> Built a Retrieval-Augmented Generation (RAG) pipeline using LlamaIndex, ChromaDB, and HuggingFace Sentence Transformers, deployed as an interactive Streamlit web app with live semantic search.</div>
-          <div class="project-tools">
-            <span class="tool-tag">Python</span>
-            <span class="tool-tag">LlamaIndex</span>
-            <span class="tool-tag">ChromaDB</span>
-            <span class="tool-tag">HuggingFace</span>
-            <span class="tool-tag">Streamlit</span>
-            <span class="tool-tag">RAG</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- 15 Grape Leaf Disease Classification + Link -->
-      <div class="project-card has-media">
-        <div class="project-thumb">
-          <img src="Screenshot%202026-08-03%20163116.png" alt="Grape Leaf Disease Classification" loading="lazy">
-        </div>
-        <div class="project-body">
-          <div class="project-header">
-            <div class="project-badges">
-              <span class="badge" style="background:rgba(255,160,80,0.1);color:#ffaa50;border:1px solid rgba(255,160,80,0.2)">Deep Learning</span>
-              <span class="badge" style="background:rgba(100,130,255,0.1);color:#8899ff;border:1px solid rgba(100,130,255,0.2)">Computer Vision</span>
-            </div>
-            <a href="https://drive.google.com/drive/folders/1Ltae9QLNvgNn319Mau5XrgCPAg48rgHv?usp=sharing" target="_blank" rel="noopener noreferrer" class="project-arrow">↗</a>
-          </div>
-          <p class="project-title">Grape Leaf Disease Classification System</p>
-          <div class="project-problem"><strong>Problem</strong> Grape crops suffer from diseases like Black Rot, ESCA, and Leaf Blight that are hard to detect manually at scale.</div>
-          <div class="project-outcome"><strong>Outcome</strong> Built a deep learning model using Transfer Learning (ResNet50, EfficientNetB7) to classify grape leaf diseases from images with high accuracy, including dataset validation, preprocessing, and performance evaluation.</div>
-          <div class="project-tools">
-            <span class="tool-tag">Python</span>
-            <span class="tool-tag">TensorFlow</span>
-            <span class="tool-tag">Keras</span>
-            <span class="tool-tag">CNN</span>
-            <span class="tool-tag">Transfer Learning</span>
-            <span class="tool-tag">ResNet50</span>
-            <span class="tool-tag">EfficientNetB7</span>
-            <span class="tool-tag">OpenCV</span>
-            <span class="tool-tag">Google Colab</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- 16 Defective Chips Detection System + Link -->
-      <div class="project-card has-media">
-        <div class="project-thumb">
-          <img src="Screenshot%202026-08-03%20163424.png" alt="Defective Chips Detection System" loading="lazy">
-        </div>
-        <div class="project-body">
-          <div class="project-header">
-            <div class="project-badges">
-              <span class="badge" style="background:rgba(255,160,80,0.1);color:#ffaa50;border:1px solid rgba(255,160,80,0.2)">Deep Learning</span>
-              <span class="badge" style="background:rgba(100,130,255,0.1);color:#8899ff;border:1px solid rgba(100,130,255,0.2)">Quality Inspection</span>
-            </div>
-            <a href="https://drive.google.com/drive/folders/1Aer7Gsog2S7czUCjBpnMA4jIvW2_-IJv?usp=sharing" target="_blank" rel="noopener noreferrer" class="project-arrow">↗</a>
-          </div>
-          <p class="project-title">Defective Chips Detection System</p>
-          <div class="project-problem"><strong>Problem</strong> Manual quality inspection of potato chips in food production is slow, inconsistent, and prone to human error.</div>
-          <div class="project-outcome"><strong>Outcome</strong> Developed an image classification system using EfficientNet-B0 and PyTorch to automatically detect defective vs non-defective chips, supporting automated quality control in food manufacturing.</div>
-          <div class="project-tools">
-            <span class="tool-tag">Python</span>
-            <span class="tool-tag">PyTorch</span>
-            <span class="tool-tag">EfficientNet-B0</span>
-            <span class="tool-tag">Albumentations</span>
-            <span class="tool-tag">OpenCV</span>
-            <span class="tool-tag">Streamlit</span>
-            <span class="tool-tag">Google Colab</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- 17 Smart Sheets Email Automation + Link -->
-      <div class="project-card has-media">
-        <div class="project-thumb">
-          <img src="cover_HD_17.png" alt="Smart Sheets Email Automation" loading="lazy">
-        </div>
-        <div class="project-body">
-          <div class="project-header">
-            <div class="project-badges">
-              <span class="badge" style="background:rgba(34,197,94,0.1);color:#16a34a;border:1px solid rgba(34,197,94,0.2)">Automation</span>
-              <span class="badge" style="background:rgba(100,130,255,0.1);color:#8899ff;border:1px solid rgba(100,130,255,0.2)">Workflow</span>
-            </div>
-            <a href="https://github.com/missalaasalah/smart-sheets-email-automation" target="_blank" rel="noopener noreferrer" class="project-arrow">↗</a>
-          </div>
-          <p class="project-title">Smart Sheets Email Automation</p>
-          <div class="project-problem"><strong>Problem</strong> Manually monitoring Google Sheets and sending follow-up emails or notifications row by row is slow and easy to miss.</div>
-          <div class="project-outcome"><strong>Outcome</strong> Built an n8n workflow that triggers on new sheet rows, uses an LLM chain to process and evaluate the data, and automatically sends emails via Gmail — plus a scheduled pipeline that reads, transforms, and appends processed rows back to the sheet.</div>
-          <div class="project-tools">
-            <span class="tool-tag">n8n</span>
-            <span class="tool-tag">Google Sheets</span>
-            <span class="tool-tag">LLM Chain</span>
-            <span class="tool-tag">OpenRouter</span>
-            <span class="tool-tag">Gmail</span>
-            <span class="tool-tag">Workflow Automation</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- 18 PDF Knowledge Base Chatbot + Link -->
-      <div class="project-card has-media">
-        <div class="project-thumb">
-          <img src="cover_HD_18.png" alt="PDF Knowledge Base Chatbot" loading="lazy">
-        </div>
-        <div class="project-body">
-          <div class="project-header">
-            <div class="project-badges">
-              <span class="badge badge-ml">RAG</span>
-              <span class="badge" style="background:rgba(100,130,255,0.1);color:#8899ff;border:1px solid rgba(100,130,255,0.2)">Chatbot</span>
-            </div>
-            <a href="https://github.com/missalaasalah/pdf-knowledge-base-chatbot" target="_blank" rel="noopener noreferrer" class="project-arrow">↗</a>
-          </div>
-          <p class="project-title">PDF Knowledge Base Chatbot</p>
-          <div class="project-problem"><strong>Problem</strong> Teams need a way to ask questions directly against internal PDF documents instead of manually searching through files.</div>
-          <div class="project-outcome"><strong>Outcome</strong> Built a RAG chatbot in n8n that watches a Google Drive folder, extracts and chunks new PDFs, embeds them with Google Gemini, and stores vectors in Supabase — powering an AI Agent that answers user questions in real time using retrieved document context.</div>
-          <div class="project-tools">
-            <span class="tool-tag">n8n</span>
-            <span class="tool-tag">Supabase</span>
-            <span class="tool-tag">Google Gemini</span>
-            <span class="tool-tag">Vector Search</span>
-            <span class="tool-tag">Google Drive</span>
-            <span class="tool-tag">RAG</span>
-          </div>
-        </div>
-      </div>
-
     </div>
+
+    <!-- 2 GTX Sales Dashboard cover_01 -->
+    <div class="project-card has-media">
+      <div class="project-thumb">
+        <img src="https://raw.githubusercontent.com/missalaasalah/protfolio/main/cover_01_small.png" alt="GTX Sales Dashboard">
+      </div>
+      <div class="project-body">
+        <div class="project-header">
+          <div class="project-badges"><span class="badge" style="background:rgba(100,130,255,0.1);color:#8899ff;border:1px solid rgba(100,130,255,0.2)">Power BI</span></div>
+          <div class="project-arrow">↗</div>
+        </div>
+        <p class="project-title">GTX Sales Dashboard — Sales Analytics</p>
+        <div class="project-problem"><strong>Problem</strong> Sales team needed a unified view of KPIs across sectors, products, managers, and agents.</div>
+        <div class="project-outcome"><strong>Outcome</strong> Built an interactive Power BI dashboard tracking sector performance, product waterfall, manager breakdown, and top sales agents.</div>
+        <div class="project-tools">
+          <span class="tool-tag">Power BI</span>
+          <span class="tool-tag">DAX</span>
+          <span class="tool-tag">Data Modeling</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 3 Sales Dashboard Multi-Year cover_02 -->
+    <div class="project-card has-media">
+      <div class="project-thumb">
+        <img src="https://raw.githubusercontent.com/missalaasalah/protfolio/main/cover_02_small.png" alt="Sales Dashboard Multi-Year">
+      </div>
+      <div class="project-body">
+        <div class="project-header">
+          <div class="project-badges"><span class="badge" style="background:rgba(100,130,255,0.1);color:#8899ff;border:1px solid rgba(100,130,255,0.2)">Power BI</span></div>
+          <div class="project-arrow">↗</div>
+        </div>
+        <p class="project-title">Sales Dashboard — Multi-Year Analysis</p>
+        <div class="project-problem"><strong>Problem</strong> Management needed to compare sales performance across multiple years with flexible filtering.</div>
+        <div class="project-outcome"><strong>Outcome</strong> Designed a multi-year sales dashboard with month and year slicers showing $85.26M total, broken down by region, product, and agent.</div>
+        <div class="project-tools">
+          <span class="tool-tag">Power BI</span>
+          <span class="tool-tag">DAX</span>
+          <span class="tool-tag">Data Modeling</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 4 Sales by Office Location cover_03 -->
+    <div class="project-card has-media">
+      <div class="project-thumb">
+        <img src="https://raw.githubusercontent.com/missalaasalah/protfolio/main/cover_03_final.png" alt="Sales by Office Location">
+      </div>
+      <div class="project-body">
+        <div class="project-header">
+          <div class="project-badges"><span class="badge" style="background:rgba(100,130,255,0.1);color:#8899ff;border:1px solid rgba(100,130,255,0.2)">Power BI</span></div>
+          <div class="project-arrow">↗</div>
+        </div>
+        <p class="project-title">Sales by Office Location — Geographic Analysis</p>
+        <div class="project-problem"><strong>Problem</strong> Leadership lacked visibility into how each office contributed to overall sales across 15 countries.</div>
+        <div class="project-outcome"><strong>Outcome</strong> Created a multi-page geographic dashboard with flag slicers, country timeline, and drill-through by location.</div>
+        <div class="project-tools">
+          <span class="tool-tag">Power BI</span>
+          <span class="tool-tag">DAX</span>
+          <span class="tool-tag">Maps</span>
+          <span class="tool-tag">Data Modeling</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 5 GTX Multi-Page Report cover_05 -->
+    <div class="project-card has-media">
+      <div class="project-thumb">
+        <img src="https://raw.githubusercontent.com/missalaasalah/protfolio/main/cover_05_small.png" alt="GTX Multi-Page Report">
+      </div>
+      <div class="project-body">
+        <div class="project-header">
+          <div class="project-badges"><span class="badge" style="background:rgba(100,130,255,0.1);color:#8899ff;border:1px solid rgba(100,130,255,0.2)">Power BI</span></div>
+          <div class="project-arrow">↗</div>
+        </div>
+        <p class="project-title">GTX Sales Dashboard — Multi-Page Report</p>
+        <div class="project-problem"><strong>Problem</strong> Stakeholders needed a structured multi-page report covering sales from different angles.</div>
+        <div class="project-outcome"><strong>Outcome</strong> Developed a multi-page Power BI report with treemap, waterfall, and donut charts across product, month, agent, and region views.</div>
+        <div class="project-tools">
+          <span class="tool-tag">Power BI</span>
+          <span class="tool-tag">Treemap</span>
+          <span class="tool-tag">Waterfall</span>
+          <span class="tool-tag">DAX</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 6 GTX Green Theme cover_06 -->
+    <div class="project-card has-media">
+      <div class="project-thumb">
+        <img src="https://raw.githubusercontent.com/missalaasalah/protfolio/main/cover_06_small.png" alt="GTX Green Theme">
+      </div>
+      <div class="project-body">
+        <div class="project-header">
+          <div class="project-badges"><span class="badge" style="background:rgba(100,130,255,0.1);color:#8899ff;border:1px solid rgba(100,130,255,0.2)">Power BI</span></div>
+          <div class="project-arrow">↗</div>
+        </div>
+        <p class="project-title">GTX Sales Dashboard — Green Theme</p>
+        <div class="project-problem"><strong>Problem</strong> Client requested a branded green-theme dashboard with map, decomposition tree, and key influencers.</div>
+        <div class="project-outcome"><strong>Outcome</strong> Delivered a polished green-branded dashboard with sales by map, decomposition, key influencers, and manager breakdown showing $20.94M total.</div>
+        <div class="project-tools">
+          <span class="tool-tag">Power BI</span>
+          <span class="tool-tag">Map Visual</span>
+          <span class="tool-tag">Key Influencers</span>
+          <span class="tool-tag">DAX</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 7 Global Sales Europe cover_07 -->
+    <div class="project-card has-media">
+      <div class="project-thumb">
+        <img src="https://raw.githubusercontent.com/missalaasalah/protfolio/main/cover_07_small.png" alt="Global Sales Europe">
+      </div>
+      <div class="project-body">
+        <div class="project-header">
+          <div class="project-badges"><span class="badge" style="background:rgba(100,130,255,0.1);color:#8899ff;border:1px solid rgba(100,130,255,0.2)">Power BI</span></div>
+          <div class="project-arrow">↗</div>
+        </div>
+        <p class="project-title">Global Sales Analytics — Europe Market</p>
+        <div class="project-problem"><strong>Problem</strong> The European team needed a dedicated view of sales by category, ship mode, and segment across 2011-2014.</div>
+        <div class="project-outcome"><strong>Outcome</strong> Built a dark-themed Europe market dashboard showing $5.49M total with gauge, donut, bar, and stream charts filtered by year, month, and segment.</div>
+        <div class="project-tools">
+          <span class="tool-tag">Power BI</span>
+          <span class="tool-tag">DAX</span>
+          <span class="tool-tag">Data Modeling</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 8 GTX Full Dataset cover_08 -->
+    <div class="project-card has-media">
+      <div class="project-thumb">
+        <img src="https://raw.githubusercontent.com/missalaasalah/protfolio/main/cover_08_small.png" alt="GTX Full Dataset">
+      </div>
+      <div class="project-body">
+        <div class="project-header">
+          <div class="project-badges"><span class="badge" style="background:rgba(100,130,255,0.1);color:#8899ff;border:1px solid rgba(100,130,255,0.2)">Power BI</span></div>
+          <div class="project-arrow">↗</div>
+        </div>
+        <p class="project-title">GTX Sales Dashboard — Full Dataset</p>
+        <div class="project-problem"><strong>Problem</strong> The company needed a complete view of 85.26M in sales across all sectors, products, managers, and 30+ agents.</div>
+        <div class="project-outcome"><strong>Outcome</strong> Created a full-dataset dashboard with sector area chart, product waterfall, manager donut, and full agent bar chart with month/year filters.</div>
+        <div class="project-tools">
+          <span class="tool-tag">Power BI</span>
+          <span class="tool-tag">DAX</span>
+          <span class="tool-tag">Data Modeling</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 9 Restaurant Sales cover_09 -->
+    <div class="project-card has-media">
+      <div class="project-thumb">
+        <img src="https://raw.githubusercontent.com/missalaasalah/protfolio/main/cover_09_small.png" alt="Restaurant Sales">
+      </div>
+      <div class="project-body">
+        <div class="project-header">
+          <div class="project-badges"><span class="badge" style="background:rgba(100,130,255,0.1);color:#8899ff;border:1px solid rgba(100,130,255,0.2)">Power BI</span></div>
+          <div class="project-arrow">↗</div>
+        </div>
+        <p class="project-title">Restaurant Sales — Food &amp; Beverage</p>
+        <div class="project-problem"><strong>Problem</strong> A restaurant needed to identify top-selling items and understand revenue distribution across food categories.</div>
+        <div class="project-outcome"><strong>Outcome</strong> Built a food and beverage dashboard showing $159.22K total sales, top 7 items, and category breakdown with Italian cuisine leading at $49.46K.</div>
+        <div class="project-tools">
+          <span class="tool-tag">Power BI</span>
+          <span class="tool-tag">DAX</span>
+          <span class="tool-tag">Food &amp; Beverage</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 10 Problem-Based Thinking cover_10 -->
+    <div class="project-card has-media">
+      <div class="project-thumb">
+        <img src="https://raw.githubusercontent.com/missalaasalah/protfolio/main/cover_10_small.png" alt="Problem-Based Thinking">
+      </div>
+      <div class="project-body">
+        <div class="project-header">
+          <div class="project-badges"><span class="badge" style="background:rgba(255,160,80,0.1);color:#ffaa50;border:1px solid rgba(255,160,80,0.2)">PowerPoint</span></div>
+          <div class="project-arrow">↗</div>
+        </div>
+        <p class="project-title">Problem-Based Thinking — Presentation</p>
+        <div class="project-problem"><strong>Problem</strong> Needed to communicate a structured problem-solving methodology covering PBT steps and Socratic thinking.</div>
+        <div class="project-outcome"><strong>Outcome</strong> Designed a 6-section presentation covering PBT introduction, steps, practical examples, reflection, Socrates philosophy, and a summary.</div>
+        <div class="project-tools">
+          <span class="tool-tag">PowerPoint</span>
+          <span class="tool-tag">Presentation Design</span>
+          <span class="tool-tag">Storytelling</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 11 Sales Analytics Excel cover_11 -->
+    <div class="project-card has-media">
+      <div class="project-thumb">
+        <img src="https://raw.githubusercontent.com/missalaasalah/protfolio/main/cover_11_small.png" alt="Sales Analytics Excel">
+      </div>
+      <div class="project-body">
+        <div class="project-header">
+          <div class="project-badges"><span class="badge" style="background:rgba(34,197,94,0.1);color:#16a34a;border:1px solid rgba(34,197,94,0.2)">Excel</span></div>
+          <div class="project-arrow">↗</div>
+        </div>
+        <p class="project-title">Sales Analytics Dashboard — Excel</p>
+        <div class="project-problem"><strong>Problem</strong> Raw sales data was unstructured and inconsistent, making it impossible to identify revenue trends.</div>
+        <div class="project-outcome"><strong>Outcome</strong> Cleaned and modeled the dataset into a pivot-based interactive dashboard highlighting key revenue metrics by country, segment, category, and region.</div>
+        <div class="project-tools">
+          <span class="tool-tag">Excel</span>
+          <span class="tool-tag">Pivot Tables</span>
+          <span class="tool-tag">Charts</span>
+          <span class="tool-tag">Conditional Formatting</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 12 Revenue by Region cover_12 -->
+    <div class="project-card has-media">
+      <div class="project-thumb">
+        <img src="https://raw.githubusercontent.com/missalaasalah/protfolio/main/cover_12_small.png" alt="Revenue by Region">
+      </div>
+      <div class="project-body">
+        <div class="project-header">
+          <div class="project-badges"><span class="badge" style="background:rgba(100,130,255,0.1);color:#8899ff;border:1px solid rgba(100,130,255,0.2)">Power BI</span></div>
+          <div class="project-arrow">↗</div>
+        </div>
+        <p class="project-title">Revenue by Region — Global Revenue Map</p>
+        <div class="project-problem"><strong>Problem</strong> The business needed a geographic breakdown of revenue across Asia, Europe, and North America by product and payment method.</div>
+        <div class="project-outcome"><strong>Outcome</strong> Built a global revenue map with Bing Maps, product bar chart, and payment method donut showing 63.51% via primary payment method.</div>
+        <div class="project-tools">
+          <span class="tool-tag">Power BI</span>
+          <span class="tool-tag">Bing Maps</span>
+          <span class="tool-tag">DAX</span>
+          <span class="tool-tag">Data Modeling</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 13 Body Performance ML + Link -->
+    <div class="project-card has-media">
+      <div class="project-thumb">
+        <img src="https://raw.githubusercontent.com/missalaasalah/protfolio/main/bodyperf_cover.png" alt="Body Performance ML">
+      </div>
+      <div class="project-body">
+        <div class="project-header">
+          <div class="project-badges"><span class="badge badge-ml">Machine Learning</span></div>
+          <a href="https://drive.google.com/drive/folders/108fFeBf72nT8IAOR_gthvtzHEsMhtOA7" target="_blank" rel="noopener noreferrer" class="project-arrow">↗</a>
+        </div>
+        <p class="project-title">Body Performance — ML Classification &amp; Regression</p>
+        <div class="project-problem"><strong>Problem</strong> Needed a model to predict body performance scores from physical fitness attributes.</div>
+        <div class="project-outcome"><strong>Outcome</strong> Built a complete end-to-end ML pipeline achieving strong accuracy through feature engineering and tuned models.</div>
+        <div class="project-tools">
+          <span class="tool-tag">Python</span>
+          <span class="tool-tag">Pandas</span>
+          <span class="tool-tag">NumPy</span>
+          <span class="tool-tag">Matplotlib</span>
+          <span class="tool-tag">Seaborn</span>
+          <span class="tool-tag">Scikit-learn</span>
+        </div>
+      </div>
+    </div>
+
   </div>
 </section>
+  <!-- 14 AI Market RAG -->
+    <div class="project-card has-media">
+      <div class="project-thumb">
+        <img src="https://raw.githubusercontent.com/missalaasalah/protfolio/main/Screenshot%202026-07-20%20085246.png" alt="AI Market RAG">
+      </div>
+      <div class="project-body">
+        <div class="project-header">
+          <div class="project-badges"><span class="badge badge-ml">Machine Learning</span></div>
+          <a href="https://github.com/missalaasalah/AI-Market-RAG-v" target="_blank" rel="noopener noreferrer" class="project-arrow">↗</a>
+        </div>
+        <p class="project-title">AI Market RAG — Semantic Search over AI Index Report</p>
+        <div class="project-problem"><strong>Problem</strong> Researchers needed a fast way to search and query Stanford's AI Index Report 2025 without manually reading through hundreds of pages.</div>
+        <div class="project-outcome"><strong>Outcome</strong> Built a Retrieval-Augmented Generation (RAG) pipeline using LlamaIndex, ChromaDB, and HuggingFace Sentence Transformers, deployed as an interactive Streamlit web app with live semantic search.</div>
+        <div class="project-tools">
+          <span class="tool-tag">Python</span>
+          <span class="tool-tag">LlamaIndex</span>
+          <span class="tool-tag">ChromaDB</span>
+          <span class="tool-tag">HuggingFace</span>
+          <span class="tool-tag">Streamlit</span>
+          <span class="tool-tag">RAG</span>
+        </div>
+      </div>
+    </div>
+  <div class="project-card fade-up">
+  <div class="project-img">
+    <img src="Screenshot%202026-08-03%20163116.png" alt="Grape Leaf Disease Classification" loading="lazy">
+  </div>
+  <div class="project-info">
+    <div class="project-tags">
+      <span>Deep Learning</span>
+      <span>Computer Vision</span>
+    </div>
+    <h3 class="project-title">Grape Leaf Disease Classification System</h3>
+    <div class="project-body">
+      <p><strong>Problem</strong><br>Grape crops suffer from diseases like Black Rot, ESCA, and Leaf Blight that are hard to detect manually at scale.</p>
+      <p><strong>Outcome</strong><br>Built a deep learning model using Transfer Learning (ResNet50, EfficientNetB7) to classify grape leaf diseases from images with high accuracy, including dataset validation, preprocessing, and performance evaluation.</p>
+    </div>
+    <div class="project-tech">
+      <span>Python</span>
+      <span>TensorFlow</span>
+      <span>Keras</span>
+      <span>CNN</span>
+      <span>Transfer Learning</span>
+      <span>ResNet50</span>
+      <span>EfficientNetB7</span>
+      <span>OpenCV</span>
+      <span>NumPy</span>
+      <span>Pandas</span>
+      <span>Matplotlib</span>
+      <span>Scikit-learn</span>
+      <span>Google Colab</span>
+      <span>GitHub</span>
+    </div>
+    <a href="https://drive.google.com/drive/folders/1Ltae9QLNvgNn319Mau5XrgCPAg48rgHv?usp=sharing" target="_blank" rel="noopener noreferrer" class="project-link">↗ View Project on Drive</a>
+  </div>
+</div>
 
+<div class="project-card fade-up">
+  <div class="project-img">
+    <img src="Screenshot%202026-08-03%20163424.png" alt="Defective Chips Detection System" loading="lazy">
+  </div>
+  <div class="project-info">
+    <div class="project-tags">
+      <span>Deep Learning</span>
+      <span>Quality Inspection</span>
+    </div>
+    <h3 class="project-title">Defective Chips Detection System</h3>
+    <div class="project-body">
+      <p><strong>Problem</strong><br>Manual quality inspection of potato chips in food production is slow, inconsistent, and prone to human error.</p>
+      <p><strong>Outcome</strong><br>Developed an image classification system using EfficientNet-B0 and PyTorch to automatically detect defective vs non-defective chips, supporting automated quality control in food manufacturing.</p>
+    </div>
+    <div class="project-tech">
+      <span>Python</span>
+      <span>PyTorch</span>
+      <span>EfficientNet-B0</span>
+      <span>Albumentations</span>
+      <span>OpenCV</span>
+      <span>NumPy</span>
+      <span>Matplotlib</span>
+      <span>Scikit-learn</span>
+      <span>Streamlit</span>
+      <span>Google Colab</span>
+      <span>GitHub</span>
+    </div>
+    <a href="https://drive.google.com/drive/folders/1Aer7Gsog2S7czUCjBpnMA4jIvW2_-IJv?usp=sharing" target="_blank" rel="noopener noreferrer" class="project-link">↗ View Project on Drive</a>
+  </div>
+</div>
+<div class="project-card fade-up">
+  <div class="project-img">
+    <img src="cover_HD_17.png" alt="Smart Sheets Email Automation" loading="lazy">
+  </div>
+  <div class="project-info">
+    <div class="project-tags">
+      <span>Automation</span>
+      <span>Workflow</span>
+    </div>
+    <h3 class="project-title">Smart Sheets Email Automation</h3>
+    <div class="project-body">
+      <p><strong>Problem</strong><br>Manually monitoring Google Sheets and sending follow-up emails or notifications row by row is slow and easy to miss.</p>
+      <p><strong>Outcome</strong><br>Built an n8n workflow that triggers on new sheet rows, uses an LLM chain to process and evaluate the data, and automatically sends emails via Gmail — plus a scheduled pipeline that reads, transforms, and appends processed rows back to the sheet.</p>
+    </div>
+    <div class="project-tech">
+      <span>n8n</span>
+      <span>Google Sheets</span>
+      <span>LLM Chain</span>
+      <span>OpenRouter</span>
+      <span>Gmail</span>
+      <span>Workflow Automation</span>
+    </div>
+    <a href="https://github.com/missalaasalah/smart-sheets-email-automation" target="_blank" rel="noopener noreferrer" class="project-link">↗ View Project on GitHub</a>
+  </div>
+<div class="project-card fade-up">
+  <div class="project-img">
+    <img src="cover_HD_18.png" alt="PDF Knowledge Base Chatbot" loading="lazy">
+  </div>
+  <div class="project-info">
+    <div class="project-tags">
+      <span>RAG</span>
+      <span>Chatbot</span>
+    </div>
+    <h3 class="project-title">PDF Knowledge Base Chatbot</h3>
+    <div class="project-body">
+      <p><strong>Problem</strong><br>Teams need a way to ask questions directly against internal PDF documents instead of manually searching through files.</p>
+      <p><strong>Outcome</strong><br>Built a RAG chatbot in n8n that watches a Google Drive folder, extracts and chunks new PDFs, embeds them with Google Gemini, and stores vectors in Supabase — powering an AI Agent that answers user questions in real time using retrieved document context.</p>
+    </div>
+    <div class="project-tech">
+      <span>n8n</span>
+      <span>Supabase</span>
+      <span>Google Gemini</span>
+      <span>Vector Search</span>
+      <span>Google Drive</span>
+      <span>RAG</span>
+    </div>
+    <a href="https://github.com/missalaasalah/pdf-knowledge-base-chatbot" target="_blank" rel="noopener noreferrer" class="project-link">↗ View Project on GitHub</a>
+  </div>
+</div>
 <!-- CERTIFICATIONS -->
 <section id="certifications" class="certs-section">
   <div class="section-inner">
@@ -1022,7 +1013,7 @@
         <img src="Screenshot%202026-06-12%20202430.png" alt="Programming with JavaScript" loading="lazy">
         <div class="cert-label">Programming with JavaScript <span>Meta · May 2026</span></div>
       </div>
-      <div class="cert-img-wrap" onclick="openLightbox(this)">
+<div class="cert-img-wrap" onclick="openLightbox(this)">
         <img src="Screenshot%202026-06-24%20092643.png" alt="Building Multi-Agent Systems" loading="lazy">
         <div class="cert-label">Building Multi-Agent Systems <span>Microsoft · Jun 2026</span></div>
       </div>
@@ -1038,8 +1029,12 @@
         <img src="Screenshot%202026-06-24%20092749.png" alt="AI Agent Fundamentals with Azure AI Foundry" loading="lazy">
         <div class="cert-label">AI Agent Fundamentals with Azure AI Foundry <span>Microsoft · Jun 2026</span></div>
       </div>
+    </div>
+  </div>
+ <!-- Certifications Row: Fabric + Power BI -->
+    <div style="display: flex; gap: 20px; flex-wrap: wrap;">
 
-      <!-- Fabric + Power BI badge certifications -->
+      <!-- Certification: Fabric Analytics Engineer Associate -->
       <div class="cert-card">
         <img src="https://raw.githubusercontent.com/missalaasalah/protfolio/main/1784186525416.jpg" alt="Microsoft Certified: Fabric Analytics Engineer Associate" class="cert-image">
         <div class="cert-body">
@@ -1047,6 +1042,8 @@
           <p class="cert-issuer">Microsoft</p>
         </div>
       </div>
+
+      <!-- Certification: Power BI Data Analyst Associate -->
       <div class="cert-card">
         <img src="https://raw.githubusercontent.com/missalaasalah/protfolio/main/1783514511651.jpg" alt="Microsoft Certified: Power BI Data Analyst Associate" class="cert-image">
         <div class="cert-body">
@@ -1054,22 +1051,23 @@
           <p class="cert-issuer">Microsoft</p>
         </div>
       </div>
-
+      
       <div class="cert-img-wrap" onclick="openLightbox(this)">
-        <img src="Screenshot%202026-07-31%20200930.png" alt="AWS Certified Cloud Practitioner" loading="lazy">
-        <div class="cert-label">AWS Certified Cloud Practitioner <span>Amazon Web Services · Jul 2026</span></div>
-      </div>
+  <img src="Screenshot%202026-07-31%20200930.png" alt="AWS Certified Cloud Practitioner" loading="lazy">
+  <div class="cert-label">AWS Certified Cloud Practitioner <span>Amazon Web Services · Jul 2026</span></div>
+</div>
+      
+<div class="cert-img-wrap" onclick="openLightbox(this)">
+  <img src="Screenshot%202026-07-31%20200814.png" alt="AWS Certified Cloud Practitioner" loading="lazy">
+  <div class="cert-label">AWS Certified Cloud Practitioner <span>Amazon Web Services · Jul 2026</span></div>
+</div>
+      
       <div class="cert-img-wrap" onclick="openLightbox(this)">
-        <img src="Screenshot%202026-07-31%20200814.png" alt="AWS Certified Cloud Practitioner" loading="lazy">
-        <div class="cert-label">AWS Certified Cloud Practitioner <span>Amazon Web Services · Jul 2026</span></div>
-      </div>
-      <div class="cert-img-wrap" onclick="openLightbox(this)">
-        <img src="Screenshot_20-8-2026_95442_learn.microsoft.com.jpeg" alt="Microsoft Azure AI Fundamentals AI-900" loading="lazy">
-        <div class="cert-label">Microsoft Azure AI Fundamentals <span>Microsoft · Aug 2026</span></div>
-      </div>
-
+  <img src="Screenshot_20-8-2026_95442_learn.microsoft.com.jpeg" alt="Microsoft Azure AI Fundamentals AI-900" loading="lazy">
+  <div class="cert-label">Microsoft Azure AI Fundamentals <span>Microsoft · Aug 2026</span></div>
+</div>
+      
     </div>
-  </div>
 </section>
 
 <!-- LIGHTBOX -->
